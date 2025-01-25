@@ -1,8 +1,11 @@
-
 .header {
-    background-image: url('./assets/header-bg.jpg');
-    height: 625px;
-    background-position: center 60%;
-    background-repeat: no-repeat;
+  background-image: url('./assets/header-bg.jpg');
+  height: 625px;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  font-family: IvarRegular, serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 110%;
+  color: #000039;
 }
-
