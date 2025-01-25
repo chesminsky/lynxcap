@@ -1,24 +1,25 @@
-import { CleanWebpackPlugin } from "clean-webpack-plugin";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import path from "path";
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 export default {
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: "bundle.js",
-    path: path.resolve("dist"),
+    filename: 'bundle.js',
+    path: path.resolve('dist')
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.pug', // Path to your Pug template
       filename: 'index.html', // Output HTML file
-      minify: false, // Minify HTML output
+      minify: false // Minify HTML output
     }),
     new MiniCssExtractPlugin({
-      filename: "bundle.css",
-    }),
+      filename: 'bundle.css'
+    })
   ],
   module: {
     rules: [
@@ -26,18 +27,18 @@ export default {
         test: /\.pug$/, // Process .pug files
         use: [
           {
-            loader: "pug-loader",
+            loader: 'pug-loader',
             options: {
-              pretty: true, // Indent the output HTML for readability
-            },
-          },
-        ],
+              pretty: true // Indent the output HTML for readability
+            }
+          }
+        ]
       },
       {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader'
           // {
           //   loader: "postcss-loader",
           //   options: {
@@ -53,8 +54,14 @@ export default {
           //     },
           //   },
           // },
-        ],
-      },
-    ],
+        ]
+      }
+    ]
   },
+  devServer: {
+    open: true,
+    port: 8080,
+    liveReload: true,
+    watchFiles: ['src/**/*.**'],
+  }
 };
