@@ -1,4 +1,8 @@
 @theme {
   --color-*: initial;
   --color-dark-blue: #000039;
+
+  --breakpoint-*: initial;
+  --breakpoint-desktop: 1180px;
 }
+
