@@ -7,5 +7,5 @@
   font-weight: 400;
   font-size: 64px;
   line-height: 110%;
-  color: #000039;
+  color: var(--color-dark-blue);
 }
