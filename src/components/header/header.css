@@ -1,11 +1,29 @@
+.nav {
+  height: 100px;
+}
+
 .header {
   background-image: url('./assets/header-bg.jpg');
   height: 625px;
   background-position: center 60%;
   background-repeat: no-repeat;
-  font-family: IvarRegular, serif;
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 110%;
+
   color: var(--color-dark-blue);
+
+  &__title {
+    font-family: 'ivar', serif;
+    font-size: 64px;
+    line-height: 110%;
+    padding-top: 90px;
+    margin-bottom: 28px;
+  }
+
+  &__description {
+    font-family: 'larsseit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    max-width: 380px;
+  }
 }
