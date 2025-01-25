@@ -1,7 +1,24 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import fs from 'fs';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
+
+const pugPages = () => {
+  const dir = './src/pages';
+  const files = fs.readdirSync(dir);
+
+  return files.map((file) => {
+    if (file.match(/\.pug$/)) {
+      let filename = file.substring(0, file.length - 4);
+      return new HtmlWebpackPlugin({
+        template: dir + '/' + filename + '.pug',
+        filename: filename + '.html',
+        minify: false
+      });
+    }
+  });
+};
 
 export default {
   mode: 'development',
@@ -12,11 +29,7 @@ export default {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.pug', // Path to your Pug template
-      filename: 'index.html', // Output HTML file
-      minify: false // Minify HTML output
-    }),
+    ...pugPages(),
     new MiniCssExtractPlugin({
       filename: 'bundle.css'
     })
@@ -24,12 +37,12 @@ export default {
   module: {
     rules: [
       {
-        test: /\.pug$/, // Process .pug files
+        test: /\.pug$/,
         use: [
           {
             loader: 'pug-loader',
             options: {
-              pretty: true // Indent the output HTML for readability
+              pretty: true
             }
           }
         ]
@@ -40,17 +53,13 @@ export default {
           MiniCssExtractPlugin.loader,
           'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    "@tailwindcss/postcss"
-                  ],
-                ],
-              },
-            },
-          },
+                plugins: [['@tailwindcss/postcss']]
+              }
+            }
+          }
         ]
       }
     ]
@@ -59,6 +68,6 @@ export default {
     open: true,
     port: 8080,
     liveReload: true,
-    watchFiles: ['src/**/*.**'],
+    watchFiles: ['src/**/*.**']
   }
 };
