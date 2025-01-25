@@ -1,3 +1,3 @@
 import './index.css';
 
-console.log('hi');
+console.log('hi lynxcap');

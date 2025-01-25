@@ -1,0 +1,8 @@
+
+.header {
+    background-image: url('./assets/header-bg.jpg');
+    height: 625px;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+}
+

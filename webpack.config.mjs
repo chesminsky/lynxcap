@@ -37,6 +37,13 @@ export default {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg)$/,
+        type: "asset/resource",
+        generator: {
+          filename: 'img/[name][ext]', 
+        },
+      },
+      {
         test: /\.pug$/,
         use: [
           {
@@ -56,7 +63,7 @@ export default {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [['@tailwindcss/postcss']]
+                plugins: ['@tailwindcss/postcss', 'postcss-nested']
               }
             }
           }
