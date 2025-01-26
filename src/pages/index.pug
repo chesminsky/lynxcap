@@ -2,12 +2,14 @@ extends ../layout/layout.pug
 
 block header
     header.header
-        .container.mx-auto
+        .container.mx-auto.relative
             .header__content
                 h1.header__title Performance in Details 
                 p.header__description We are Swiss experts in real estate, specializing in secured claims acquisitions and effective workouts driven by a commitment to reliability, reputation and results.
+                .performance
+                    img(src=require("../assets/performance.svg"), alt="performance", class="hidden desktop:block")
+                    img(src=require("../assets/performance_m.svg"), alt="performance", class="block desktop:hidden")
 
 
 block content
-    h1 Welcome to My Website
-    p This is the home page of my website.
+    .content contents

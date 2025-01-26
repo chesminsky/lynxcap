@@ -9,6 +9,7 @@
 
 /* shared components */
 @import './components/nav.css';
+@import './components/footer.css';
 
 /* pages */
 @import './pages/index.css';

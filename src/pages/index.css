@@ -26,7 +26,19 @@
   }
 }
 
+.performance {
+  position: absolute;
+  right: 15px;
+  top: calc(274px + var(--nav-height));
+}
+
 @media (min-width: theme('screens.desktop')) {
+  .performance {
+    position: absolute;
+    right: 112px;
+    top: calc(20px + var(--nav-height-desktop));
+  }
+
   .header {
     background-image: url('./assets/snow-bg.jpg');
     background-position: top center;
