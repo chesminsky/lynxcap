@@ -1,32 +1,20 @@
 .header {
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/header-vectors.svg');
-    z-index: 1;
-    background-position: center top;
-    background-repeat: no-repeat;
-  }
-
-  position: relative;
-  background-image: url('./assets/header-bg.jpg');
-  height: 625px;
-  background-position: center 60%;
   background-repeat: no-repeat;
-  padding: 133px 16px 0;
   color: var(--color-dark-blue);
+  background-image: url('./assets/snow-bg-large.jpg');
+  background-position: calc(50% + 318px) calc(50% - 43px);
+  height: 690px;
+
+  &__content {
+    padding: 0 16px;
+    padding-top: calc(33px + var(--nav-height));
+  }
 
   &__title {
     font-family: 'ivar', serif;
-    font-size: 64px;
+    font-size: 36px;
     line-height: 110%;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   &__description {
@@ -41,9 +29,19 @@
 
 @media (min-width: theme('screens.desktop')) {
   .header {
-    padding: 190px 100px 0;
-    &::before {
-      background-position: right top;
-    }
+    background-image: url('./assets/snow-bg.png');
+    background-position: center top;
+    height: 625px;
+  }
+
+  .header__content {
+    padding-left: 96px;
+    padding-top: calc(100px + var(--nav-height-desktop));
+  }
+
+  .header__title {
+    font-size: 64px;
+    line-height: 110%;
+    margin-bottom: 28px;
   }
 }
