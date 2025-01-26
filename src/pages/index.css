@@ -29,7 +29,7 @@
 
 @media (min-width: theme('screens.desktop')) {
   .header {
-    background-image: url('./assets/snow-bg.png');
+    background-image: url('./assets/snow-bg.jpg');
     background-position: center top;
     height: 625px;
   }
@@ -43,5 +43,13 @@
     font-size: 64px;
     line-height: 110%;
     margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header {
+    background-image: url('./assets/snow-bg-high-res.jpg');
+    background-position: bottom center;
+    background-size: cover;
   }
 }
