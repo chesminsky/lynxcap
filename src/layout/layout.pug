@@ -5,7 +5,9 @@ html
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
     body
-        include ./components/header/header.pug
+        .relative
+            include ../components/nav.pug
+            block header
         main
             block content
         footer

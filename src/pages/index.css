@@ -1,9 +1,6 @@
-.nav {
-  height: 100px;
-  outline: 1px solid red;
-}
-
 .header {
+  position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -13,7 +10,7 @@
     height: 100%;
     background-image: url('./assets/header-vectors.svg');
     z-index: 1;
-    background-position: right top;
+    background-position: center top;
     background-repeat: no-repeat;
   }
 
@@ -22,12 +19,8 @@
   height: 625px;
   background-position: center 60%;
   background-repeat: no-repeat;
-
+  padding: 133px 16px 0;
   color: var(--color-dark-blue);
-
-  &__content {
-    padding: 33px 16px;
-  }
 
   &__title {
     font-family: 'ivar', serif;
@@ -47,7 +40,10 @@
 }
 
 @media (min-width: theme('screens.desktop')) {
-  .header__content {
-    padding: 90px 100px;
+  .header {
+    padding: 190px 100px 0;
+    &::before {
+      background-position: right top;
+    }
   }
 }

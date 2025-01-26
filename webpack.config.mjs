@@ -17,7 +17,7 @@ const pugPages = () => {
         minify: false
       });
     }
-  });
+  }).filter(Boolean);
 };
 
 export default {

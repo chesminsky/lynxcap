@@ -1,6 +1,14 @@
+/* common */
 @import 'tailwindcss';
 @import './styles/theme.css';
 @import './styles/fonts.css';
 
-@import './components/header/header.css';
+/* layout */
+@import './layout/layout.css';
+
+/* shared components */
+@import './components/nav.css';
+
+/* pages */
+@import './pages/index.css';
 
