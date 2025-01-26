@@ -1,3 +1,23 @@
-
-nav.nav
-    .container.mx-auto navigation menu
+nav.nav.flex.items-center
+    .container.mx-auto
+        .flex.justify-between.items-center(class="px-4 desktop:px-0")
+            .logo
+                img(src=require("../assets/logo.svg"), alt="logo")
+            .nav-links(class="hidden desktop:block")
+                ul.flex.text-base.text-dark-blue.font-semibold
+                    li.pr-5
+                        a(href="#") News
+                    li.pr-5
+                        a(href="#") About us
+                    li.pr-5
+                        a(href="#") Team
+                    li.pr-5
+                        a(href="#") Portfolio
+                    li.pr-5
+                        a(href="#") Partners
+                    li.pr-30
+                        a(href="#") Contacts
+                    li
+                        a(href="#") Login
+            .burger(class="desktop:hidden")
+                img(src=require("../assets/burger.svg"), alt="burger")

@@ -11,14 +11,13 @@
   }
 
   &__title {
-    font-family: 'ivar', serif;
+    font-family: var(--font-serif);
     font-size: 36px;
     line-height: 110%;
     margin-bottom: 24px;
   }
 
   &__description {
-    font-family: 'larsseit', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -30,7 +29,7 @@
 @media (min-width: theme('screens.desktop')) {
   .header {
     background-image: url('./assets/snow-bg.jpg');
-    background-position: center top;
+    background-position: top center;
     height: 625px;
   }
 
@@ -49,7 +48,7 @@
 @media (min-width: 1900px) {
   .header {
     background-image: url('./assets/snow-bg-high-res.jpg');
-    background-position: bottom center;
+    background-position: 50% 70%;
     background-size: cover;
   }
 }

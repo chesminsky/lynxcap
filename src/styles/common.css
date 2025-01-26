@@ -1,8 +1,9 @@
 body {
+    font-family: var(--font-sans);
     color: var(--color-black);
     line-height: 1.3;
 }
 
-.container {
+/* .container {
     outline: 1px solid green;
-}
+} */

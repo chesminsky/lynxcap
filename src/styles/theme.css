@@ -23,6 +23,9 @@
   --color-grey-7: #F5F5F5;
   --color-error: #D72020;
 
+  --font-serif: 'ivar', serif;
+  --font-sans: 'larsseit', sans-serif;
+
   --breakpoint-*: initial;
   --breakpoint-desktop: 1180px;
 }
