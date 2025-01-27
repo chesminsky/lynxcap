@@ -1,10 +1,35 @@
 .container.mx-auto.footer
+    .grid.grid-cols-3.mb-9
+        .text-4xl.font-serif Stability from real estate. Yield from expertise. 
+        .pt-2
+            .grid.grid-cols-2.font-medium
+                ul
+                    li.mb-3
+                        a(href="#") Bonds
+                    li.mb-3
+                        a(href="#") News
+                    li.mb-3
+                        a(href="#") About us
+                ul
+                    li.mb-3
+                        a(href="#") Portfolio
+                    li.mb-3
+                        a(href="#") Partners
+
+        .pt-2
+            .mb-3.font-medium Contacts
+            .text-sm.font-light
+                .mb-2 +41-41-71 000 75 info@lynxcapinvestments.com
+                .mb-2 Our headquarter: Lüssihofweg 4, 6300 Zug, Switzerland
+                a(href="#") See all contacts
+
+
     hr.mb-5
-    .grid.grid-cols-3.gap-4
+    .grid.grid-cols-3
         div
             .logo.mb-7
                 img(src=require("../assets/logo_white.svg"), alt="performance")
             .text-grey-4.text-sm © LynxCap Group. All Rights Reserved.
         div
             .text-sm.mb-2 United Identification Number CHE-244.186.164
-            .text-sm.cursor-pointer Term of use
+            a.text-sm(href="#") Term of use
