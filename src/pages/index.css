@@ -13,15 +13,11 @@
   &__title {
     font-family: var(--font-serif);
     font-size: 36px;
-    line-height: 110%;
     margin-bottom: 24px;
   }
 
   &__description {
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
-    line-height: 130%;
     max-width: 380px;
   }
 }

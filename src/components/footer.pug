@@ -1,7 +1,9 @@
 .container.mx-auto.footer
-    .grid.grid-cols-3.mb-9
-        .text-4xl.font-serif Stability from real estate. Yield from expertise. 
-        .pt-2
+    .mb-9(class="desktop:grid desktop:grid-cols-3")
+        .text-2xl.font-serif.mb-12(class="desktop:mb-0 desktop:text-4xl") 
+            div Stability from real estate.
+            div Yield from expertise. 
+        .pt-2.mb-12(class="desktop:mb-0")
             .grid.grid-cols-2.font-medium
                 ul
                     li.mb-3
@@ -25,11 +27,11 @@
 
 
     hr.mb-5
-    .grid.grid-cols-3
+    div(class="desktop:grid desktop:grid-cols-3")
         div
-            .logo.mb-7
+            .mb-5(class="desktop:mb-0")
                 img(src=require("../assets/logo_white.svg"), alt="performance")
-            .text-grey-4.text-sm © LynxCap Group. All Rights Reserved.
-        div
+        .mb-5(class="desktop:mb-0")
             .text-sm.mb-2 United Identification Number CHE-244.186.164
             a.text-sm(href="#") Term of use
+    .text-grey-4.text-sm © LynxCap Group. All Rights Reserved.
