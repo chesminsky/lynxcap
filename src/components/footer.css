@@ -4,4 +4,11 @@ hr {
 
 .footer {
   color: var(--color-white);
+  padding: 40px 18px 50px;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .footer {
+    padding: 60px 40px 80px;
+  }
 }

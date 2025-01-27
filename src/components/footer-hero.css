@@ -1,0 +1,28 @@
+.footer-hero {
+  padding: 60px 18px 50px;
+
+  &__text {
+    /* padding: 0 80px 0 60px; */
+  }
+
+  &__image{
+    max-width: 50%;
+    img {
+        width: 100%;
+    }
+  }
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .footer-hero {
+    padding: 85px 40px 100px;
+  }
+
+  .footer-hero__text {
+    padding: 0 80px 0 60px;
+  }
+
+  .footer-hero__image {
+    max-width: unset;
+  }
+}

@@ -10,6 +10,7 @@
 /* shared components */
 @import './components/nav.css';
 @import './components/footer.css';
+@import './components/footer-hero.css';
 
 /* pages */
 @import './pages/index.css';
