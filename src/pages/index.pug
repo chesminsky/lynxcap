@@ -13,7 +13,7 @@ block header
 
 block content
     .container.mx-auto.mt-20(class="desktop:mt-23")
-        article.px-3.text-dark-blue(class="desktop:px-0")
+        .px-3.text-dark-blue(class="desktop:px-0")
             h2.text-4xl.text-center.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14") 
                 | Stability from real estate.
                 br
@@ -61,6 +61,42 @@ block content
                             .icon-right-arrow
                 .text-sm.mt-4
                     | *current offering, subject to market changes
+
+        .px-3.text-dark-blue.mb-20(class="desktop:px-0 desktop:mb-30")
+            h2.text-4xl.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14") 
+                | Company news
+            div(class="desktop:grid desktop:grid-cols-3 desktop:gap-8")
+                .mb-10
+                    div(class="w-1/2 desktop:w-screen")
+                        img.mb-8(src=require("../assets/example1.png"))
+                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        | New 200M Acquisition complete
+                    .text-base.mb-4(class="desktop:text-xl")
+                        | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.
+                    div
+                      | 09th of October 2024
+                .mb-10
+                    div(class="w-1/2 desktop:w-screen")
+                        img.mb-8(src=require("../assets/example2.png"))
+                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        | APK 5 Loan fully repaid
+                    .text-base.mb-4(class="desktop:text-xl")
+                        | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.
+                    div
+                      | 09th of October 2024
+                .mb-10
+                    div(class="w-1/2 desktop:w-screen")
+                        img.mb-8(src=require("../assets/example3.png"))
+                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        | New 200M Acquisition complete
+                    .text-base.mb-4(class="desktop:text-xl")
+                        | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition 
+                    div
+                      | 09th of October 2024
+            .text-left(class="desktop:text-center") 
+                button.anchor-button
+                    span See detailed offer 
+                    .icon-right-arrow
 
 block footer
     include ../components/footer-hero.pug

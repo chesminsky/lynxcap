@@ -4,6 +4,10 @@ body {
   font-weight: 400;
 }
 
+img {
+  max-width: 100%;
+}
+
 .btn {
   color: var(--color-white);
   padding: 15px 32px;
