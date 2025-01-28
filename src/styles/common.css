@@ -11,3 +11,21 @@ body {
   border: 1px solid var(--color-dark-blue);
   cursor: pointer;
 }
+
+.icon-right-arrow {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: url('./assets/right-arrow.svg');
+  background-size: cover;
+}
+
+.anchor-button {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  span + * {
+    margin-left: 8px;
+  }
+}

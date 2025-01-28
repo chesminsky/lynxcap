@@ -42,7 +42,7 @@
   }
 
   .header__content {
-    padding-left: 96px;
+    padding-left: 115px;
     padding-top: calc(100px + var(--nav-height-desktop));
   }
 
@@ -53,10 +53,23 @@
   }
 }
 
+/* extra large bg, used only for top banner */
 @media (min-width: 1900px) {
   .header {
     background-image: url('./assets/snow-bg-high-res.jpg');
     background-position: 50% 70%;
     background-size: cover;
+  }
+}
+
+.banner {
+  background: url('./assets/banner.svg') no-repeat center center;
+  background-size: cover;
+  padding: 32px 20px;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .banner {
+    padding: 60px;
   }
 }

@@ -14,7 +14,7 @@ block header
 block content
     .container.mx-auto.mt-20(class="desktop:mt-23")
         article.px-3.text-dark-blue(class="desktop:px-0")
-            h2.text-4xl.text-center.font-serif.mb-14(class="desktop:text-6xl desktop:mb-10") 
+            h2.text-4xl.text-center.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14") 
                 | Stability from real estate.
                 br
                 | Yield from expertise.
@@ -31,6 +31,36 @@ block content
                         | As an employee managed investment company, we offer investors the chance to access diversified real estate portfolios acquired at discounted prices, which are managed by our regional partner network.
                     div
                         button.btn Our portfolio
+  
+        .px-3.text-dark-blue(class="desktop:px-0")
+            .banner.mb-20(class="desktop:mb-24")
+                h2.text-4xl.font-serif.mb-5(class="desktop:text-6xl desktop:mb-12") 
+                    | Luxembourg Stock Exchange 
+                    br
+                    | EMTF listed bonds
+                div(class="desktop:grid desktop:grid-cols-4")
+                    .mb-8
+                        .font-serif.text-8xl
+                            | 11%
+                        .font-medium
+                            | EUR and USD 
+                            br
+                            | denominated offerings
+                    .col-span-2.mb-6
+                        hr.border-dark-blue
+                        .py-5.text-xl.font-medium
+                            .w-15.inline-block B+
+                            | Credit rating* for issuer outlook: stable  
+                        hr.border-dark-blue
+                        .py-5.text-xl.font-medium
+                            .w-15.inline-block BBB– 
+                            | Credit rating* for bond issue outlook: stable     
+                    .text-left(class="desktop:text-right") 
+                        button.anchor-button
+                            span See detailed offer 
+                            .icon-right-arrow
+                .text-sm.mt-4
+                    | *current offering, subject to market changes
 
 block footer
     include ../components/footer-hero.pug
