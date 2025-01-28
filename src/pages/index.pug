@@ -12,7 +12,25 @@ block header
 
 
 block content
-    .content contents
+    .container.mx-auto.mt-20(class="desktop:mt-23")
+        article.px-3.text-dark-blue(class="desktop:px-0")
+            h2.text-4xl.text-center.font-serif.mb-14(class="desktop:text-6xl desktop:mb-10") 
+                | Stability from real estate.
+                br
+                | Yield from expertise.
+            .img.mb-8(class="desktop:mb-12")
+                img.width-screen(src=require("../assets/article1.png"))
+            .mb-20(class="desktop:mb-24 desktop:grid desktop:grid-cols-3")
+                .mb-10
+                    .font-serif.text-8xl
+                        | 15+
+                    .font-medium
+                        | years of focused expertise.
+                .col-span-2
+                    .mb-7(class="desktop:text-xl")
+                        | As an employee managed investment company, we offer investors the chance to access diversified real estate portfolios acquired at discounted prices, which are managed by our regional partner network.
+                    div
+                        button.btn Our portfolio
 
 block footer
     include ../components/footer-hero.pug

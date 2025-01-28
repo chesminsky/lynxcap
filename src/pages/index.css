@@ -12,7 +12,7 @@
 
   &__title {
     font-family: var(--font-serif);
-    font-size: 36px;
+    font-size: var(--text-4xl);
     margin-bottom: 24px;
   }
 
@@ -47,7 +47,7 @@
   }
 
   .header__title {
-    font-size: 64px;
+    font-size: var(--text-6xl);
     line-height: 110%;
     margin-bottom: 28px;
   }
