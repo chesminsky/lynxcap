@@ -8,16 +8,18 @@ const pugPages = () => {
   const dir = './src/pages';
   const files = fs.readdirSync(dir);
 
-  return files.map((file) => {
-    if (file.match(/\.pug$/)) {
-      let filename = file.substring(0, file.length - 4);
-      return new HtmlWebpackPlugin({
-        template: dir + '/' + filename + '.pug',
-        filename: filename + '.html',
-        minify: false
-      });
-    }
-  }).filter(Boolean);
+  return files
+    .map((file) => {
+      if (file.match(/\.pug$/)) {
+        let filename = file.substring(0, file.length - 4);
+        return new HtmlWebpackPlugin({
+          template: dir + '/' + filename + '.pug',
+          filename: filename + '.html',
+          minify: false
+        });
+      }
+    })
+    .filter(Boolean);
 };
 
 export default {
@@ -40,15 +42,15 @@ export default {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]',
-        },
+          filename: 'fonts/[name][ext]'
+        }
       },
       {
         test: /\.(png|svg|jpg)$/,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext]', 
-        },
+          filename: 'img/[name][ext]'
+        }
       },
       {
         test: /\.pug$/,
