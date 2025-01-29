@@ -11,6 +11,7 @@
 @import './components/nav.css';
 @import './components/footer.css';
 @import './components/footer-hero.css';
+@import './components/terms.css';
 
 /* pages */
 @import './pages/index.css';

@@ -1,6 +1,5 @@
 .header {
   background-repeat: no-repeat;
-  color: var(--color-dark-blue);
   background-image: url('./assets/snow-bg-large.jpg');
   background-position: calc(50% + 318px) calc(50% - 43px);
   height: 690px;

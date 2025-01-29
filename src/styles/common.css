@@ -1,6 +1,6 @@
 body {
   font-family: var(--font-sans);
-  color: var(--color-black);
+  color: var(--color-dark-blue);
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -57,4 +57,49 @@ img {
       background: var(--color-dark-blue);
     }
   }
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.custom-checkbox input {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--color-grey-3);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.custom-checkbox input:checked {
+  background-color: var(--color-dark-blue);
+  border-color: var(--color-dark-blue);
+}
+
+.custom-checkbox input[disabled] {
+  cursor: default;
+  background-color: var(--color-grey-5);
+  border-color: var(--color-grey-5);
+}
+
+
+.custom-checkbox-label {
+  font-weight: 500;
+}
+
+.custom-checkbox input:checked::after {
+  content: '';
+  display: block;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2213%22%20viewBox%3D%220%200%2016%2013%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14.5159%201.69189L5.34928%2011.0252L1.18262%206.7828%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  height: 22px;
+  width: 25px;
 }
