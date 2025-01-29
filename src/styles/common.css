@@ -2,6 +2,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-black);
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 img {
