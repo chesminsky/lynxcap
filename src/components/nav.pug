@@ -2,7 +2,8 @@ nav.nav.flex.items-center
     .container.mx-auto
         .flex.justify-between.items-center(class="px-4 desktop:px-0")
             .logo
-                img(src=require("../assets/logo.svg"), alt="logo")
+                a(href="/")
+                    img(src=require("../assets/logo.svg"), alt="logo")
             .nav-links(class="hidden desktop:block")
                 ul.flex.text-base.text-dark-blue.font-medium
                     li.pr-5
@@ -22,4 +23,29 @@ nav.nav.flex.items-center
                     li
                         a(href="#") Login
             .burger(class="desktop:hidden")
-                img(src=require("../assets/burger.svg"), alt="burger")
+                div(data-id="open-nav")
+                    img(src=require("../assets/burger.svg"), alt="burger")
+
+nav.nav-mobile.text-white.bg-dark-blue.menu-hidden(data-id="mobile-nav")
+    .flex.justify-between.p-3.items-center
+        .logo
+            img(src=require("../assets/logo_white.svg"), alt="logo")
+        div(data-id="close-nav")
+            +svg-icon(svg-icon-name='close')    
+    .p-16
+        ul.text-center.font-serif.text-3xl
+            li.pb-5
+                a(href="#") Bonds
+            li.pb-5
+                a(href="#") News
+            li.pb-5
+                a(href="#") About us
+            li.pb-5
+                a(href="#") Team
+            li.pb-5
+                a(href="#") Portfolio
+            li.pb-5
+                a(href="#") Partners
+        hr.border-white
+        .text-center.mt-6
+            a(href="#") Login

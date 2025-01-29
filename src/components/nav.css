@@ -18,3 +18,25 @@
     height: var(--nav-height-desktop);
   }
 }
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.nav-mobile {
+  transform: translateY(0);
+  transition: transform 0.3s linear;
+}
+
+.nav-mobile.menu-hidden {
+  transform: translateY(-100%);
+}
+
+.menu-hidden > * {
+  display: none;
+}
