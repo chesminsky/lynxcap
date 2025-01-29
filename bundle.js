@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\nconsole.log('hi lynxcap');\n\n//# sourceURL=webpack://lynxcap/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\nconst init = () => {\n  const el = {\n    burger: document.querySelector('[data-id=\"open-nav\"]'),\n    close: document.querySelector('[data-id=\"close-nav\"]'),\n    mobileNav: document.querySelector('[data-id=\"mobile-nav\"]'),\n  };\n\n  const classes = {\n    menuHidden: 'menu-hidden',\n  }\n\n  el.burger.addEventListener('click', () => {\n    el.mobileNav.classList.remove(classes.menuHidden);\n  });\n\n  el.close.addEventListener('click', () => {\n    el.mobileNav.classList.add(classes.menuHidden);\n  });\n\n  console.log('app initialized...');\n};\n\ndocument.addEventListener('DOMContentLoaded', init);\n\n\n//# sourceURL=webpack://lynxcap/./src/index.js?");
 
 /***/ })
 

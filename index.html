@@ -7,26 +7,51 @@
   <script defer src="bundle.js"></script><link href="bundle.css" rel="stylesheet"></head>
   <body>
     <div class="relative">
-<nav class="nav flex items-center">
-  <div class="container mx-auto">
-    <div class="flex justify-between items-center px-4 desktop:px-0">
-      <div class="logo"><img src="img/logo.svg" alt="logo"></div>
-      <div class="nav-links hidden desktop:block">
-        <ul class="flex text-base text-dark-blue font-medium">
-          <li class="pr-5"><a href="#">Bonds</a></li>
-          <li class="pr-5"><a href="#">News</a></li>
-          <li class="pr-5"><a href="#">About us</a></li>
-          <li class="pr-5"><a href="#">Team</a></li>
-          <li class="pr-5"><a href="#">Portfolio</a></li>
-          <li class="pr-5"><a href="#">Partners</a></li>
-          <li class="pr-30"><a href="#">Contacts</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </div>
-      <div class="burger desktop:hidden"><img src="img/burger.svg" alt="burger"></div>
-    </div>
-  </div>
-</nav>
+      <nav class="nav flex items-center">
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center px-4 desktop:px-0">
+            <div class="logo"><a href="/"><img src="img/logo.svg" alt="logo"></a></div>
+            <div class="nav-links hidden desktop:block">
+              <ul class="flex text-base text-dark-blue font-medium">
+                <li class="pr-5"><a class="is-active" href="#">Bonds</a></li>
+                <li class="pr-5"><a href="#">News</a></li>
+                <li class="pr-5"><a href="#">About us</a></li>
+                <li class="pr-5"><a href="#">Team</a></li>
+                <li class="pr-5"><a href="#">Portfolio</a></li>
+                <li class="pr-5"><a href="#">Partners</a></li>
+                <li class="pr-30"><a href="#">Contacts</a></li>
+                <li><a href="#">Login</a></li>
+              </ul>
+            </div>
+            <div class="burger desktop:hidden">
+              <div data-id="open-nav"><img src="img/burger.svg" alt="burger"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="nav-mobile text-white bg-dark-blue menu-hidden" data-id="mobile-nav">
+        <div class="flex justify-between p-3 items-center">
+          <div class="logo"><img src="img/logo_white.svg" alt="logo"></div>
+          <div data-id="close-nav">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          </div>
+        </div>
+        <div class="p-16">
+          <ul class="text-center font-serif text-3xl">
+            <li class="pb-5"><a href="#">Bonds</a></li>
+            <li class="pb-5"><a href="#">News</a></li>
+            <li class="pb-5"><a href="#">About us</a></li>
+            <li class="pb-5"><a href="#">Team</a></li>
+            <li class="pb-5"><a href="#">Portfolio</a></li>
+            <li class="pb-5"><a href="#">Partners</a></li>
+          </ul>
+          <hr class="border-white">
+          <div class="text-center mt-6"><a href="#">Login</a></div>
+        </div>
+      </nav>
       <header class="header">
         <div class="container mx-auto relative">
           <div class="header__content">
@@ -50,9 +75,7 @@
             </div>
             <div class="col-span-2">
               <div class="mb-7 desktop:text-xl">As an employee managed investment company, we offer investors the chance to access diversified real estate portfolios acquired at discounted prices, which are managed by our regional partner network.</div>
-              <div>
-                <button class="btn">Our portfolio</button>
-              </div>
+              <div><a class="btn" href="#">Our portfolio</a></div>
             </div>
           </div>
         </div>
@@ -67,19 +90,20 @@
               </div>
               <div class="col-span-2 mb-6">
                 <hr class="border-dark-blue">
-                <div class="py-5 text-xl font-medium">
-                  <div class="w-15 inline-block">B+</div>Credit rating* for issuer outlook: stable  
+                <div class="py-5 text-xl font-medium flex">
+                  <div class="w-20 inline-block">B+</div>Credit rating* for issuer outlook: stable  
                 </div>
                 <hr class="border-dark-blue">
-                <div class="py-5 text-xl font-medium">
-                  <div class="w-15 inline-block">BBB– </div>Credit rating* for bond issue outlook: stable     
+                <div class="py-5 text-xl font-medium flex">
+                  <div class="w-20 inline-block">BBB– </div>Credit rating* for bond issue outlook: stable     
                 </div>
               </div>
-              <div class="text-left desktop:text-right"> 
-                <button class="anchor-button"><span>See detailed offer </span>
-                  <div class="icon-right-arrow"></div>
-                </button>
-              </div>
+              <div class="text-left desktop:text-right"> <a class="anchor-button" href="#"><span>See detailed offer </span>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10,10)">
+    <path d="M9.83496 17.4893L17.835 9.48926M17.835 9.48926L9.83496 1.48926M17.835 9.48926H1.83496" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+</svg></a></div>
             </div>
             <div class="text-sm mt-4">*current offering, subject to market changes</div>
           </div>
@@ -89,32 +113,27 @@
              Company news</h2>
           <div class="desktop:grid desktop:grid-cols-3 desktop:gap-8">
             <div class="mb-10">
-              <div class="w-1/2 desktop:w-screen"><img class="mb-8" src="img/example1.png"></div>
-              <h3 class="font-serif text-3xl mb-4 desktop:text-4xl">
-                 New 200M Acquisition complete</h3>
+              <div class="w-1/2 desktop:w-screen"><a href="#"><img class="zoomable mb-8" src="img/example1.png"></a></div><a class="font-serif text-3xl mb-4 inline-block desktop:text-4xl hover:underline" href="#">New 200M Acquisition complete</a>
               <div class="text-base mb-4 desktop:text-xl">LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.</div>
               <div>09th of October 2024</div>
             </div>
             <div class="mb-10">
-              <div class="w-1/2 desktop:w-screen"><img class="mb-8" src="img/example2.png"></div>
-              <h3 class="font-serif text-3xl mb-4 desktop:text-4xl">
-                 APK 5 Loan fully repaid</h3>
+              <div class="w-1/2 desktop:w-screen"><a href="#"><img class="zoomable mb-8" src="img/example2.png"></a></div><a class="font-serif text-3xl mb-4 inline-block desktop:text-4xl hover:underline" href="#">APK 5 Loan fully repaid</a>
               <div class="text-base mb-4 desktop:text-xl">LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.</div>
               <div>09th of October 2024</div>
             </div>
             <div class="mb-10">
-              <div class="w-1/2 desktop:w-screen"><img class="mb-8" src="img/example3.png"></div>
-              <h3 class="font-serif text-3xl mb-4 desktop:text-4xl">
-                 New 200M Acquisition complete</h3>
+              <div class="w-1/2 desktop:w-screen"><a href="#"><img class="zoomable mb-8" src="img/example3.png"></a></div><a class="font-serif text-3xl mb-4 inline-block desktop:text-4xl hover:underline" href="#">New 200M Acquisition complete</a>
               <div class="text-base mb-4 desktop:text-xl">LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition </div>
               <div>09th of October 2024</div>
             </div>
           </div>
-          <div class="text-left desktop:text-center"> 
-            <button class="anchor-button"><span>See detailed offer </span>
-              <div class="icon-right-arrow"></div>
-            </button>
-          </div>
+          <div class="text-left desktop:text-center"> <a class="anchor-button" href="#"><span>See detailed offer </span>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10,10)">
+    <path d="M9.83496 17.4893L17.835 9.48926M17.835 9.48926L9.83496 1.48926M17.835 9.48926H1.83496" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+</svg></a></div>
         </div>
       </div>
     </main>
