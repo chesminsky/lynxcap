@@ -30,7 +30,7 @@ block content
                     .mb-7(class="desktop:text-xl")
                         | As an employee managed investment company, we offer investors the chance to access diversified real estate portfolios acquired at discounted prices, which are managed by our regional partner network.
                     div
-                        button.btn Our portfolio
+                        a.btn(href="#") Our portfolio
   
         .px-3.text-dark-blue(class="desktop:px-0")
             .banner.mb-20(class="desktop:mb-24")
@@ -48,17 +48,17 @@ block content
                             | denominated offerings
                     .col-span-2.mb-6
                         hr.border-dark-blue
-                        .py-5.text-xl.font-medium
-                            .w-15.inline-block B+
+                        .py-5.text-xl.font-medium.flex
+                            .w-20.inline-block B+
                             | Credit rating* for issuer outlook: stable  
                         hr.border-dark-blue
-                        .py-5.text-xl.font-medium
-                            .w-15.inline-block BBB– 
+                        .py-5.text-xl.font-medium.flex
+                            .w-20.inline-block BBB– 
                             | Credit rating* for bond issue outlook: stable     
                     .text-left(class="desktop:text-right") 
-                        button.anchor-button
+                        a.anchor-button(href="#")
                             span See detailed offer 
-                            .icon-right-arrow
+                            +svg-icon(svg-icon-name='right-arrow')
                 .text-sm.mt-4
                     | *current offering, subject to market changes
 
@@ -68,8 +68,9 @@ block content
             div(class="desktop:grid desktop:grid-cols-3 desktop:gap-8")
                 .mb-10
                     div(class="w-1/2 desktop:w-screen")
-                        img.mb-8(src=require("../assets/example1.png"))
-                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        a(href="#")
+                            img.zoomable.mb-8(src=require("../assets/example1.png"))
+                    a.font-serif.text-3xl.mb-4.inline-block(class="desktop:text-4xl hover:underline" href="#")
                         | New 200M Acquisition complete
                     .text-base.mb-4(class="desktop:text-xl")
                         | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.
@@ -77,8 +78,9 @@ block content
                       | 09th of October 2024
                 .mb-10
                     div(class="w-1/2 desktop:w-screen")
-                        img.mb-8(src=require("../assets/example2.png"))
-                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        a(href="#")
+                            img.zoomable.mb-8(src=require("../assets/example2.png"))
+                    a.font-serif.text-3xl.mb-4.inline-block(class="desktop:text-4xl hover:underline" href="#")
                         | APK 5 Loan fully repaid
                     .text-base.mb-4(class="desktop:text-xl")
                         | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.
@@ -86,17 +88,18 @@ block content
                       | 09th of October 2024
                 .mb-10
                     div(class="w-1/2 desktop:w-screen")
-                        img.mb-8(src=require("../assets/example3.png"))
-                    h3.font-serif.text-3xl.mb-4(class="desktop:text-4xl") 
+                        a(href="#")
+                            img.zoomable.mb-8(src=require("../assets/example3.png"))
+                    a.font-serif.text-3xl.mb-4.inline-block(class="desktop:text-4xl hover:underline" href="#")
                         | New 200M Acquisition complete
                     .text-base.mb-4(class="desktop:text-xl")
                         | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition 
                     div
                       | 09th of October 2024
             .text-left(class="desktop:text-center") 
-                button.anchor-button
+                a.anchor-button(href="#")
                     span See detailed offer 
-                    .icon-right-arrow
+                    +svg-icon(svg-icon-name='right-arrow')
 
 block footer
     include ../components/footer-hero.pug

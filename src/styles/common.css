@@ -14,14 +14,24 @@ img {
   background: var(--color-dark-blue);
   border: 1px solid var(--color-dark-blue);
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: var(--color-violet-1);
+    border-color: var(--color-violet-1);
+  }
+
+  &[disabled] {
+    cursor: default;
+    background: var(--color-grey-5);
+    border-color: var(--color-grey-5);
+  }
 }
 
-.icon-right-arrow {
-  height: 40px;
-  width: 40px;
-  display: inline-block;
-  background: url('./assets/right-arrow.svg');
-  background-size: cover;
+.zoomable {
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .anchor-button {
@@ -31,5 +41,19 @@ img {
   cursor: pointer;
   span + * {
     margin-left: 8px;
+  }
+
+  svg {
+    transition: all 0.3s;
+    border-radius: 100%;
+    border: 2px solid var(--color-dark-blue);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    svg {
+      color: var(--color-white);
+      background: var(--color-dark-blue);
+    }
   }
 }
