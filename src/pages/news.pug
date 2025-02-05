@@ -1,0 +1,24 @@
+extends ../layout/layout.pug
+
+block content
+    .news-container.mx-auto.container
+        h2.text-4xl.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14") Press and Latest News
+
+        .news-grid 
+            - var n = 0
+            while n < 12
+                - n++
+                .news-grid-card
+                    div
+                        a(href="#")
+                            img.zoomable.mb-8(src=require("../assets/example1.png"))
+                    a.font-serif.text-3xl.mb-4.inline-block(class="desktop:text-4xl hover:underline" href="#")
+                        | New 200M Acquisition complete
+                    .text-base.mb-4(class="desktop:text-xl")
+                        | LynxCap in partnership with New York-based MHR Fund Management LLC, is pleased to announce the successful acquisition of a portfolio of real estate secured claims from a US-based asset manager.
+                    div
+                      | 09th of October 2024
+        .text-left(class="desktop:text-center") 
+                a.anchor-button(href="#")
+                    span Load more
+                    +svg-icon(svg-icon-name='right-arrow')
