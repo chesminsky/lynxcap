@@ -27,11 +27,23 @@
   top: calc(274px + var(--nav-height));
 }
 
+.wh-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: calc(var(--nav-height) + 59px);
+}
+
 @media (min-width: theme('screens.desktop')) {
   .performance {
     position: absolute;
     right: 112px;
     top: calc(20px + var(--nav-height-desktop));
+  }
+
+  .wh-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: calc(var(--nav-height-desktop) + 82px);
   }
 
   .header {
