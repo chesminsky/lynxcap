@@ -1,51 +1,52 @@
-nav.nav.flex.items-center
-    .container.mx-auto
-        .flex.justify-between.items-center(class="px-4 desktop:px-0")
-            .logo
-                a(href="/")
-                    img(src=require("../assets/logo.svg"), alt="logo")
-            .nav-links(class="hidden desktop:block")
-                ul.flex.text-base.font-medium
-                    li.pr-5
-                        a.is-active(href="#") Bonds
-                    li.pr-5
-                        a(href="#") News
-                    li.pr-5
-                        a(href="#") About us
-                    li.pr-5
-                        a(href="#") Team
-                    li.pr-5
-                        a(href="#") Portfolio
-                    li.pr-5
-                        a(href="#") Partners
-                    li.pr-30
-                        a(href="#") Contacts
-                    li
-                        a(href="#") Login
-            .burger(class="desktop:hidden")
-                div(data-id="open-nav")
-                    img(src=require("../assets/burger.svg"), alt="burger")
+mixin nav(current_page)
+    nav.nav.flex.items-center
+        .container.mx-auto
+            .flex.justify-between.items-center(class="px-4 desktop:px-0")
+                .logo
+                    a(href="/")
+                        img(src=require("../assets/logo.svg"), alt="logo")
+                .nav-links(class="hidden desktop:block")
+                    ul.flex.text-base.font-medium
+                        li.pr-5
+                            a(href="#") Bonds
+                        li.pr-5
+                            a(href="news.html", class=(current_page === "news" && "is-active")) News
+                        li.pr-5
+                            a(href="#") About us
+                        li.pr-5
+                            a(href="#") Team
+                        li.pr-5
+                            a(href="#") Portfolio
+                        li.pr-5
+                            a(href="#") Partners
+                        li.pr-30
+                            a(href="#") Contacts
+                        li
+                            a(href="#") Login
+                .burger(class="desktop:hidden")
+                    div(data-id="open-nav")
+                        img(src=require("../assets/burger.svg"), alt="burger")
 
-nav.nav-mobile.text-white.bg-dark-blue.menu-hidden(data-id="mobile-nav")
-    .flex.justify-between.p-3.items-center
-        .logo
-            img(src=require("../assets/logo_white.svg"), alt="logo")
-        div(data-id="close-nav")
-            +svg-icon(svg-icon-name='close')    
-    .p-16
-        ul.text-center.font-serif.text-3xl
-            li.pb-10
-                a(href="#") Bonds
-            li.pb-10
-                a(href="#") News
-            li.pb-10
-                a(href="#") About us
-            li.pb-10
-                a(href="#") Team
-            li.pb-10
-                a(href="#") Portfolio
-            li.pb-10
-                a(href="#") Partners
-        hr
-        .text-center.mt-10.font-medium
-            a(href="#") Login
+    nav.nav-mobile.text-white.bg-dark-blue.menu-hidden(data-id="mobile-nav")
+        .flex.justify-between.p-3.items-center
+            .logo
+                img(src=require("../assets/logo_white.svg"), alt="logo")
+            div(data-id="close-nav")
+                +svg-icon(svg-icon-name='close')    
+        .p-16
+            ul.text-center.font-serif.text-3xl
+                li.pb-10
+                    a(href="#") Bonds
+                li.pb-10
+                    a(href="news.html") News
+                li.pb-10
+                    a(href="#") About us
+                li.pb-10
+                    a(href="#") Team
+                li.pb-10
+                    a(href="#") Portfolio
+                li.pb-10
+                    a(href="#") Partners
+            hr
+            .text-center.mt-10.font-medium
+                a(href="#") Login

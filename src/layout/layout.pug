@@ -1,5 +1,7 @@
 include ../mixins/svg-icon
+include ../components/nav
 
+block variables
 doctype html
 html
     head
@@ -8,7 +10,7 @@ html
         meta(name='viewport', content='width=device-width, initial-scale=1')
     body
         .relative
-            include ../components/nav.pug
+            +nav(current_page)
             block header
         main
             block content
