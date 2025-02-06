@@ -1,8 +1,7 @@
 .header {
   background-repeat: no-repeat;
-  background-image: url('./assets/snow-bg-large.jpg');
-  background-position: calc(50% + 318px) calc(50% - 43px);
-  height: 690px;
+  background-image: url('./assets/snow-bg-mobile.jpg');
+  background-position: top left;
 
   &__content {
     padding: 0 16px;
@@ -17,13 +16,13 @@
 
   &__description {
     font-size: 20px;
-    max-width: 380px;
     margin-bottom: 12px;
   }
 }
 
 .performance {
   position: relative;
+  padding-bottom: 80px;
 }
 
 .performance__desc {
@@ -65,6 +64,13 @@
 
 @media (min-width: theme('screens.desktop')) {
 
+  .header {
+      background-repeat: no-repeat;
+      background-image: url('./assets/snow-bg-large.jpg');
+      background-position: calc(50% + 318px) calc(50% - 43px);
+      min-height: 690px;
+  }
+
   .performance {
     position: absolute;
   }
@@ -97,7 +103,7 @@
   
   #performance-3 {
     position: absolute;
-    right: 54px;
+    left: 318px;
     top: 280px;
     .performance__title {
       font-size: 56px;
