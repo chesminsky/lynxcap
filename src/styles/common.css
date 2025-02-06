@@ -10,6 +10,7 @@ img {
 }
 
 .btn {
+  display: inline-block;
   color: var(--color-white);
   padding: 15px 32px;
   background: var(--color-dark-blue);
@@ -41,6 +42,7 @@ img {
   &:hover {
     .link {
       text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
 
     img {
