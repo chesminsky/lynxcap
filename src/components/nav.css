@@ -33,6 +33,17 @@
   }
 }
 
+.nav .logo, .nav-mobile .logo {
+  transform: scale(.75);
+  transform-origin: center left;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .nav .logo, .nav-mobile .logo {
+    transform: scale(1);
+  }
+}
+
 .nav-mobile {
   position: fixed;
   top: 0;
@@ -40,11 +51,14 @@
   right: 0;
   bottom: 0;
   z-index: 1000;
+
+  hr {
+    border-color: var(--color-grey-3);
+  }
 }
 
 .nav-mobile {
   transform: translateY(0);
-  transition: transform 0.3s linear;
 }
 
 .nav-mobile.menu-hidden {
