@@ -20,7 +20,7 @@ mixin nav(current_page)
                         li.pr-5
                             a(href="#") Partners
                         li.pr-30
-                            a(href="#") Contacts
+                            a(href="contacts.html", class=(current_page === "contacts" && "is-active")) Contacts
                         li
                             a(href="#") Login
                 .burger(class="desktop:hidden")

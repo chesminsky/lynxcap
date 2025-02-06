@@ -1,0 +1,75 @@
+extends ../layout/layout.pug
+
+block variables
+    - var current_page = 'contacts'
+
+block content
+    .mx-auto.container.wh-container
+        h1.text-4xl.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14")  Contacts
+
+        .blue-banner.mb-10(class="desktop:mb-14")
+            h3.mb-8.font-medium.text-xl
+                | Our headquarter:
+            
+            .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                | Switzerland 
+
+            .mb-4(class="desktop:text-xl")
+                .mb-3
+                    | Lüssihofweg 4, Zug
+                .mb-3
+                    | +41 41 71 000 75
+                    br
+                    | +41 79 85 62720
+                    br
+                    | +41 76 29 50212
+                .mb-6 
+                    | info@lynxcapinvestments.com
+
+                div 
+                    a(href="#").btn Contact Us
+            .map
+                img(src=require("../assets/map.png"))
+
+        .mb-10(class="desktop:grid desktop:grid-cols-4 desktop:gap-5 large:gap-10")
+            .mb-10
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Hong Kong  
+                div(class="desktop:text-xl")
+                    .mb-3
+                        | Office 803,
+                        br
+                        | Beautiful Group Tower 74-77 Connaught Road Central, Hong Kong
+                    div
+                        | +852 3590 5895
+                hr.border-dark-blue.mt-12.mb-4
+                a(href="#")
+                    .flex.items-center
+                        img.mr-2(src=require("../assets/linkedin.svg"))
+                        .font-medium.text-xl Follow us on LinkedIn
+                        
+            .mb-10
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Slovenia  
+                div(class="desktop:text-xl")
+                    .mb-3
+                        | Nazorjeva ulica 12 Ljubljana, Slovenia.
+                    div
+                        | +386 1 320 0720
+            .mb-10
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Luxembourg  
+                div(class="desktop:text-xl")
+                    .mb-3
+                        | 34 Rue du Cure 1368, Luxembourg
+                    div
+                        | +352 661 117 477
+            .mb-10
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | South Korea  
+                div(class="desktop:text-xl")
+                    .mb-3
+                        | 24, Gukjegeumyung-ro 2-gil, Yeongdeungpo-gu, Yeoido-Dong, BNK Finance Tower, Seoul, Republic of Korea
+                    div
+                        | +85294448661                                                       
+                
