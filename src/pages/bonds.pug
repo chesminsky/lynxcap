@@ -1,1 +1,157 @@
 extends ../layout/layout.pug
+
+block content
+    .bonds-container.mx-auto.container.wh-container
+        h2.text-4xl.font-serif.mb-6(class="desktop:text-6xl desktop:mb-14") Luxembourg Stock Exchange EMTF listed bonds
+        div.bonds-info.mb-16
+            div.text-base.info-description We offer investors one product, Luxembourg listed bonds that provide exposure to real estate security with yields higher than typical real estate funds and unlike regular funds, we pledge all profits for the benefit of our bondholders.
+            div.info-percentage 
+                .font-serif.text-8xl.mb-2
+                        | 11%
+                .font-medium
+                        | EUR and USD denominated offerings 
+            div.info-table 
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block 4/5 Year Terms
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block Bullet                        
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-14.inline-block B+
+                        | Credit rating* for issuer outlook: stable   
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block Sr.Secured
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block Parent Guarantee                                                
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-14.inline-block BBB-
+                        | Credit rating* for bond issue outlook: stable 
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block Quarterly Payments 
+                div.info-table-block
+                    hr.border-dark-blue
+                    .py-5.text-xl.font-medium.flex
+                        .w-40.inline-block Security Agent: Apex Group                        
+
+            div.info-download
+                a.anchor-button(href="#")
+                    span Prospectus download
+                    +svg-icon(svg-icon-name='download')
+
+        .img.mb-8(class="desktop:mb-12")
+            img.size-full(src=require("../assets/article1.png")) 
+
+        .investors.mb-16(class="desktop:mb-31")
+            .investors-subtitle 
+                +svg-icon(svg-icon-name='line')
+                | Investors'
+            h2.text-4xl.font-serif.mb-10.mt-8(class="desktop:text-6xl desktop:mb-14") 32.2M is paid out to investors to date                 
+            .investors-container 
+                .investors-left
+                    p.text-base.mb-2(class="desktop:mb-4") As a company owned by its management and employees , we foster a culture of alignment with our investors' interests. 
+                    p.text-base.mb-2(class="desktop:mb-4") Our commitment is evident in our practice of always taking a junior position in all acquisitions, subordinating our future earnings for the benefit of our bondholders. 
+                    p.text-base.mb-2(class="desktop:mb-4") Additionally we provide parent guarantee for our bonds, further ensuring the security of our investor's interests. Apex Group Ltd. provides security agent services being fiduciary to the bondholders which ensures independent control of all our actions in line with best practices in investment industry.
+                .investors-right 
+                    .investors-right-numbers
+                        div.mr-22.investors-right-numbers-cell
+                            .font-serif.text-8xl.mb-2
+                                | 9
+                            .font-medium
+                                | bonds fully repaid
+
+                        div.investors-right-numbers-cell
+                            .font-serif.text-8xl.mb-2
+                                | 12
+                            .font-medium
+                                | bonds open to investors
+                    
+                    a.anchor-button.mt-14(href="#")
+                        span See Bond repayment table
+                        +svg-icon(svg-icon-name='right-arrow')
+
+    .bonds-blueblock.pb-10(class="desktop:pb-29")
+        .mx-auto.container.wh-container
+            .investors-subtitle 
+                +svg-icon(svg-icon-name='line')
+                | Investors'
+
+            h2.text-4xl.font-serif.mb-10.mt-8(class="desktop:text-6xl desktop:mb-14") Our holdings consist of real estate-backed claims and real estate owned assets.               
+
+            .info-container 
+                .info-container-left 
+                    .font-serif.text-8xl.mb-2
+                        | 130.9M
+                    .font-medium
+                        | of collateral in portfolio 
+
+                    p.mt-10.text-base(class="desktop:mb-11") Our holdings consist of real estate-backed claims and real estate owned assets.  This strong collateral not only enhances the security of our bonds but also reflects our commitment to delivering value and stability to our investors.
+
+                    a.anchor-button.mt-8(href="#" class="desktop:mt-11")
+                        span Portfolio strategy
+                        +svg-icon(svg-icon-name='right-arrow')
+
+                .info-container-right(class="desktop:mt-4")
+                    img.size-full(src=require("../assets/realestate1.png"))
+
+    .bonds-container.mx-auto.container.wh-container.bonds-second
+        .bonds-tranches 
+            .bonds-tranches-icon
+                svg(width='100' height='101' viewbox='0 0 100 101' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.49023 97.7026L97.5098 2.68311' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M34.3304 21.6369C34.3304 29.7786 27.7345 36.3787 19.5885 36.3787C11.4426 36.3787 4.84668 29.7786 4.84668 21.6369C4.84668 13.4952 11.4426 6.89502 19.5885 6.89502C27.7345 6.89502 34.3304 13.4952 34.3304 21.6369V21.6369Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M93.2979 80.6044C93.2979 88.7461 86.702 95.3462 78.5561 95.3462C70.4101 95.3462 63.8142 88.7461 63.8142 80.6044C63.8142 72.4627 70.4101 65.8625 78.5561 65.8625C86.702 65.8625 93.2979 72.4627 93.2979 80.6044V80.6044Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M97.5098 30.0608V2.68311H70.1321' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+            .bonds-tranches-info
+                h2.text-4xl.font-serif.mb-6(class="desktop:text-6xl") Bond tranches available 
+                p.text-base Our bonds attract a diverse array of professional and institutional investors reflecting strong confidence in our financial strategies and the stability of our asset backed securities.
+                a.anchor-button.mt-6(href="#")
+                    span See Bond tranches table
+                    +svg-icon(svg-icon-name='right-arrow')
+
+        .bonds-luxembourg.mt-22(class="desktop:mt-31")
+            .bonds-luxembourg-img 
+                img.size-full.bonds-luxembourg-img-desktop(src=require("../assets/lx-bg-img.png"))
+                img.size-full.bonds-luxembourg-img-mobile(src=require("../assets/lx-bg-img-mobile.png"))
+                
+            .bonds-luxembourg-info 
+                h2.text-4xl.font-serif.mb-6.mt-12(class="desktop:text-6xl desktop:mt-0") Why Luxembourg? 
+                p.text-base.mt-6 Renowned for its robust regulatory framework and international reach the Luxembourg Stock Exchange (LSE) adheres to world class standards including audit requirements and offers unparalleled visibility and credibility to our offerings.  Luxembourg's strategic location at the hear of Europe, combined with its reputation as a leading financial center ensures that our bonds attract a diverse and global investor base.  
+                p.text-base.mt-2 The exchanges advanced trading infrastructure and commitment to transparency make it an ideal venue for our bonds.  By listing our bonds on the EMTF section of the LSE reinforces our dedication to maintaining the highest standards of governance and compliance
+                a.anchor-button.mt-6.mb-8(href="#")
+                    span See our listing in LSE
+                    +svg-icon(svg-icon-name='right-arrow')
+
+        .bonds-partners.mb-38
+            .investors-subtitle 
+                +svg-icon(svg-icon-name='line')
+                | Our Partners in Bonds Placement
+
+            h2.text-4xl.font-serif.mb-6.mt-12(class="desktop:text-6xl desktop:mt-12") We prioritize investor protection and trust by collaborating with highly reputable partners in the bond market
+
+            .bonds-partners-grid.mt-11
+                - var n = 0
+                while n < 4
+                    - n++
+                    .bonds-partners-grid-cell 
+                        h3.font-serif.text-3xl.mb-4.inline-block(class="desktop:text-4xldesktop:mb-6") Trustee:  Apex Group
+                        p.text-base Apex Group provides robust fiduciary oversight and compliance for our bond issuances ensuring the protection of bondholders' interests.
+                        a.anchor-button.mt-6(href="#")
+                            span Company's website
+                            +svg-icon(svg-icon-name='right-arrow')
+
+
+block footer
+    include ../components/footer-hero.pug
