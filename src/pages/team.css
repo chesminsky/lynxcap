@@ -1,0 +1,57 @@
+.team-header {
+  background-image: url('./assets/team-header.jpg');
+  background-size: 100% 100%;
+  min-height: 373px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.team-container {
+  padding: 0 16px;
+}
+.team-grid-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 16px;
+  .text-xl,
+  .text-l {
+    font-weight: 500;
+  }
+  img {
+    width: 86px;
+    height: auto;
+  }
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .team-header {
+    height: 475px;
+    min-height: unset;
+    background-image: url('./assets/team-header.jpg');
+    .header__description {
+      max-width: 770px;
+    }
+  }
+  .team-container {
+    padding: 0;
+  }
+  .header__content {
+    padding-left: 0;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 24px;
+  }
+  .team-grid-cell {
+    gap: 18px;
+
+    img {
+      width: 128px;
+    }
+  }
+}
