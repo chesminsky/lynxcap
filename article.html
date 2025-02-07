@@ -178,7 +178,61 @@
                 <input type="checkbox"><span class="custom-checkbox-label">By proceeding, I agree to the above terms and conditions</span>
               </label>
             </div>
-            <button class="btn">Show content</button>
+            <button class="btn" data-id="terms-close">Show content</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay overlay-modal hidden" data-id="request-modal-overlay">
+        <form class="modal">
+          <div class="modal__close">
+            <div class="cursor-pointer" data-id="request-modal-close">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            </div>
+          </div>
+          <div class="modal__body">
+            <h2 class="text-4xl font-serif mb-6 desktop:text-2xl">Request Audit Report</h2>
+            <div class="mb-8 desktop:text-xl">Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.</div>
+            <div class="items-center mb-8 desktop:flex">
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">Name:</div>
+              <input class="custom-input" name="name" autocomplete="off">
+            </div>
+            <div class="items-center mb-8 desktop:flex desktop:mb-16">
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">E-mail:</div>
+              <input class="custom-input" name="email" autocomplete="off">
+            </div>
+            <div class="items-center justify-between desktop:flex">
+              <label class="custom-checkbox mb-6">
+                <input type="checkbox"><span class="custom-checkbox-label">
+                   I agree to <span class="underline">non-disclosure terms </span></span>
+              </label>
+              <button class="btn" type="submit">Submit</button>
+            </div>
+            <div class="mb-8 text-xl">Thank you! <br><br>Your request has been submitted successfully.<br>Our team will contact you shortly.</div>
+            <button class="btn" type="button" data-id="request-modal-close">Close</button>
+          </div>
+        </form>
+      </div>
+      <div class="overlay hidden" data-id="team-overlay">
+        <div class="terms terms-hidden team" data-id="team">
+          <div class="terms__header">
+            <div class="flex px-5 pt-5 items-center justify-end">
+              <div class="cursor-pointer" data-id="team-close">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+              </div>
+            </div>
+          </div>
+          <div class="team-content ml-4 mr-4 mt-3 desktop:ml-25 desktop:mr-15 desktop:mt-10"><img class="team-photo size-full" src="img/team1.png">
+            <div class="team-content-info mt-10 desktop:ml-18 desktop:mt-0">
+              <h3 class="font-serif text-3xl mb-3 inline-block desktop:text-4xl">Alexander Zwinger </h3>
+              <p class="text-base desktop:mt-4">Managing Director, Portfolio Management LynxCap Investments AG</p>
+              <p class="text-base mt-10 desktop:mt-11">Starting in 2009 Alexander Zwinger led the Analysis department (and since 2012 the Operations department) of DDM Group AG. He was responsible for establishing and continuously developing portfolio valuation and pricing models, portfolio management, and reporting processes. Mr. Zwinger spearheaded the efforts to prepare DDM for an IPO on the Nasdaq First North. Prior to DDM, Mr. Zwinger worked at Aktiv Kapital. Alexander holds Master’s degree in Economics from University of Bielefeld, Germany with a background in Economics, Statistics and Emipirical Analysis.</p>
+            </div>
           </div>
         </div>
       </div>
