@@ -1,14 +1,38 @@
 .buildings-banner {
-    height: 480px;
-    background-image: url('./assets/buildings.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
+  height: 480px;
+  background-image: url('./assets/buildings.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+}
+
+@media (min-width: theme('screens.large')) {
+  .buildings-banner {
+    background-size: cover;
   }
-  
-  @media (min-width: theme('screens.large')) {
-    .buildings-banner {
-      background-size: cover;
-    }
+}
+
+.portfolio-map {
+  height: 540px;
+  background-image: url('./assets/portfolio-map.png');
+  background-position-x: 25%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .portfolio-map {
+    background-position: bottom center;
+    margin-left: 0;
+    margin-right: 0;
   }
-  
+}
+
+@media (min-width: theme('screens.large')) {
+  .portfolio-map {
+    background-size: cover;
+  }
+}
