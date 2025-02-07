@@ -1,0 +1,102 @@
+extends ../layout/layout.pug
+
+block variables
+    - var current_page = 'about'
+
+block content
+    .about-container.mx-auto.container.wh-container
+        h2.text-4xl.font-serif.mb-6(class="desktop:text-6xl desktop:mb-14") Performance in details
+        img.size-full.about-header-desktop(src=require("../assets/about-header.png"))
+        img.size-full.about-header-mobile(src=require("../assets/about-header-mobile.png"))
+
+        .about-stats.mt-10(class="desktop:mt-14")
+            .about-stats-text(class="desktop:mt-4")
+                p.text-base We are Swiss experts in real estate secured claims acquisitions and workout, supported by a proprietary data set built on 15+ years of accumulated analysis. 
+                p.text-base.mt-4 Through our innovative IT solution, we deliver operational efficiency and investment transparency, consistently achieving positive returns. 
+
+            .about-stats-numbers
+                .about-stats-number-cell 
+                    .font-serif.text-8xl.mb-2
+                        span.about-stats-euro €
+                        | 89.7M
+                    .font-medium.w-45
+                        | Amount Invested 
+                .about-stats-number-cell 
+                    .font-serif.text-8xl.mb-2
+                        span.about-stats-euro €
+                        | 87.1M
+                    .font-medium.w-45
+                        | Total collections to date
+                .about-stats-number-cell 
+                    .font-serif.text-8xl.mb-2
+                        span.about-stats-euro €
+                        | 76M
+                    .font-medium.w-45
+                        | Estimated Remaining Collections
+                .about-stats-number-cell 
+                    .font-serif.text-8xl.mb-2
+                        | 49.4%
+                    .font-medium.w-45
+                        | Net Debt to ERC ratio  
+
+        .about-grid.mt-10(class="desktop:mt-26")
+                - var n = 0
+                while n < 4
+                    - n++
+                    .about-grid-cell 
+                        svg(width='65' height='63' viewbox='0 0 65 63' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M1.87305 30.9598L25.832 17.7318L45.7979 24.3871L63.1016 4.42126V61.6566H1.87305V1.75916' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                            path(d='M1.87305 47.0168L23.1699 35.0373H40.4736L63.1016 25.6986' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                            path(d='M1.87305 60.4124L23.1699 45.6882L40.4736 47.0193L63.1016 41.6951' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                                                                                                                    
+                        h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xldesktop:mt-8") High Performance Team
+                        p.text-base.mt-3(class="desktop:text-4xldesktop:mt-3") with headquarters in Zug, Switzerland and regional offices in Luxembourg, Hong Kong, Seoul and Slovenia practically all with the background in different European distressed funds.
+
+        .about-approach.mt-20(class="desktop:mt-26")
+            .investors-subtitle 
+                +svg-icon(svg-icon-name='line')
+                | Our Partners in Bonds Placement  
+
+            h2.text-4xl.font-serif.mt-9(class="desktop:text-6xl desktop:mt-10") Tailored strategic approach
+
+            p.text-base.mt-6(class="desktop:mt-10") We adopt a tailored strategic approach to real estate secured claims acquisitions and workout, leveraging a team of seasoned experts to deliver exceptional results.  We prioritize return on capital over amount deployed, ensuring that our strategies align with our goal of sustainable growth for our stakeholders.
+
+            div.about-approach-grid
+                div.about-approach-grid-cell 
+                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
+                    br
+                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
+                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+                div.about-approach-grid-cell 
+                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
+                    br
+                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
+                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+                div.about-approach-grid-cell 
+                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
+                    br
+                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
+                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+
+
+        .about-audit.mt-20
+            .investors-subtitle 
+                +svg-icon(svg-icon-name='line')
+                | Audit
+            h2.text-4xl.font-serif.mt-10(class="desktop:text-6xl desktop:mt-6") LynxCap Investments and the Luxembourg Securitization vehicles are audited by Deloitte/PWC. 
+                    .bonds-tranches 
+            .about-audit-grid
+                svg(width='121' height='121' viewbox='0 0 121 121' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M119.053 60.1377C119.053 60.1377 93.0334 92.991 60.9282 92.991C28.823 92.991 2.80322 60.1377 2.80322 60.1377C2.80322 60.1377 28.823 27.2844 60.9282 27.2844C93.0334 27.2844 119.053 60.1377 119.053 60.1377V60.1377Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M81.1457 60.1378C81.1457 71.3079 72.0934 80.3552 60.9283 80.3552C49.7633 80.3552 40.7109 71.3079 40.7109 60.1378C40.7109 48.9677 49.7633 39.9204 60.9283 39.9204C72.0934 39.9204 81.1457 48.9677 81.1457 60.1378V60.1378Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+                .about-audit-grid-info
+                    
+                    p.text-base(class="desktop:w-110") This partnership underscores our commitment to transparency and accountability.
+                    a.anchor-button.mt-6(data-id="request-modal-trigger")
+                        span Request Audit Report
+                        +svg-icon(svg-icon-name='right-arrow')
+
+
+block footer
+    include ../components/footer-hero.pug                            
