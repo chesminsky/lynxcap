@@ -154,7 +154,6 @@
   }
 }
 
-/* extra large bg, used only for top banner */
 @media (min-width: theme('screens.large')) {
   .header {
     background-image: url('./assets/snow-bg-high-res.jpg');

@@ -1,0 +1,25 @@
+.modal {
+  background: white;
+  padding: 72px 48px 48px;
+  position: relative;
+  height: 100%;
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.overlay-modal:not(.hidden) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .modal {
+    width: 700px;
+    height: auto;
+  }
+}

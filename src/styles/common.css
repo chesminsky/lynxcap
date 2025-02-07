@@ -113,8 +113,34 @@ img {
   display: block;
   background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2213%22%20viewBox%3D%220%200%2016%2013%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14.5159%201.69189L5.34928%2011.0252L1.18262%206.7828%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 40% center;
   background-size: 16px;
   height: 22px;
   width: 25px;
+}
+
+/* Base Input Style */
+.custom-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid var(--color-dark-blue);
+  outline: none;
+}
+
+/* Hover State */
+.custom-input:hover {
+  border-color: var(--color-grey-3);
+}
+
+/* Disabled State */
+.custom-input:disabled {
+  border-color: var(--color-grey-4);
+  color: var(--color-grey-4);
+  cursor: not-allowed;
+}
+
+/* Error State */
+.custom-input.error {
+  border-color: var(--color-error);
 }

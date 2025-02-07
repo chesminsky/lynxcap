@@ -12,6 +12,7 @@
 @import './components/footer.css';
 @import './components/footer-hero.css';
 @import './components/terms.css';
+@import './components/request-modal.css';
 
 /* pages */
 @import './pages/index.css';

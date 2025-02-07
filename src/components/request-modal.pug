@@ -1,0 +1,38 @@
+.overlay.overlay-modal.hidden(data-id="request-modal-overlay")
+    form.modal
+        .modal__close
+            .cursor-pointer(data-id="request-modal-close")
+                +svg-icon(svg-icon-name='close')
+        .modal__body
+            h2.text-4xl.font-serif.mb-6(class="desktop:text-2xl")
+                | Request Audit Report
+            .mb-8(class="desktop:text-xl")
+                | Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.
+            .items-center.mb-8(class="desktop:flex")
+                .font-medium.pr-12.whitespace-nowrap.mb-3(class="desktop:mb-0")
+                    | Name:
+                input.custom-input(name="name" autocomplete="off")
+            .items-center.mb-8(class="desktop:flex desktop:mb-16")
+                .font-medium.pr-12.whitespace-nowrap.mb-3(class="desktop:mb-0")
+                    | E-mail:
+                input.custom-input(name="email" autocomplete="off")         
+            .items-center.justify-between(class="desktop:flex")
+                label.custom-checkbox.mb-6
+                    input(type="checkbox")
+                    span.custom-checkbox-label 
+                        | I agree to 
+                        span.underline
+                            | non-disclosure terms 
+                button.btn(type="submit") Submit
+
+            .mb-8.text-xl
+                | Thank you! 
+                br
+                br
+                | Your request has been submitted successfully.
+                br
+                | Our team will contact you shortly.
+            button.btn(type="button", data-id="request-modal-close") Close
+            
+                
+        
