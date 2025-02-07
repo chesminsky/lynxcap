@@ -1,0 +1,41 @@
+extends ../layout/layout.pug
+
+block variables
+    - var current_page = 'portfolio'
+
+block content
+    .mx-auto.container.wh-container
+        h1.text-4xl.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14")
+            | Stability from real estate. 
+            br
+            | Yield from expertise.
+
+        .buildings-banner                                              
+        div(class="desktop:grid desktop:grid-cols-3")
+            .mb-10(class="desktop:mb-15")
+                div(class="desktop:text-xl desktop:pr-30")
+                    | Our holdings consist of real estate backed claims and real estate owned assets including performing assets.
+            div
+                .mb-10(class="desktop:mb-15")
+                    .font-serif.text-8xl.mb-2
+                        span.text-grey-4
+                            | €
+                        span 131.5M
+                    .font-medium
+                        | market value of real estate collateral
+                .mb-10(class="desktop:mb-15")
+                    .font-serif.text-8xl.mb-2
+                        span 28.6%
+                    .font-medium
+                        | Net Debt to MV   
+            div
+                .mb-10(class="desktop:mb-15")
+                    .font-serif.text-8xl.mb-2
+                        span >500
+                    .font-medium
+                        | portfolios analysed 
+                .mb-10(class="desktop:mb-15")
+                    .font-serif.text-8xl.mb-2
+                        span 28
+                    .font-medium
+                        | portfolios acquired  in 5 jurisdictions since 2019                                                    

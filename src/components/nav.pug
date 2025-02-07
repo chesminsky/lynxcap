@@ -16,7 +16,7 @@ mixin nav(current_page)
                         li.pr-5
                             a(href="#") Team
                         li.pr-5
-                            a(href="#") Portfolio
+                            a(href="portfolio.html", class=(current_page === "portfolio" && "is-active")) Portfolio
                         li.pr-5
                             a(href="partners.html", class=(current_page === "partners" && "is-active")) Partners
                         li.pr-30
@@ -44,7 +44,7 @@ mixin nav(current_page)
                 li.pb-10
                     a(href="#") Team
                 li.pb-10
-                    a(href="#") Portfolio
+                    a(href="portfolio.html") Portfolio
                 li.pb-10
                     a(href="partners.html") Partners
             hr

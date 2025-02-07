@@ -1,0 +1,14 @@
+.buildings-banner {
+    height: 480px;
+    background-image: url('./assets/buildings.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+  }
+  
+  @media (min-width: theme('screens.large')) {
+    .buildings-banner {
+      background-size: cover;
+    }
+  }
+  
