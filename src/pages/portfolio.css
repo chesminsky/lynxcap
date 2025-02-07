@@ -36,3 +36,31 @@
     background-size: cover;
   }
 }
+
+.accordion {
+  li {
+    position: relative;
+    cursor: pointer;
+    .accordion-icon {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+    .accordion-content {
+      max-height: 0;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+  }
+}
+
+.accordion li.is-expanded {
+  .accordion-content {
+    display: block;
+    max-height: 200px;
+    margin-top: 12px;
+  }
+  .accordion-icon {
+    transform: rotate(180deg);
+  }
+}

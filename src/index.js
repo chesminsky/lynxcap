@@ -8,14 +8,16 @@ const init = () => {
     termsTrigger: document.querySelector('[data-id="terms-trigger"]'),
     termsOverlay: document.querySelector('[data-id="terms-overlay"]'),
     termsClose: document.querySelector('[data-id="terms-close"]'),
-    termsContent: document.querySelector('[data-id="terms"]')
+    termsContent: document.querySelector('[data-id="terms"]'),
+    accordionItems: document.querySelectorAll('[data-id="accordion-item')
   };
 
   const classes = {
     menuHidden: 'menu-hidden',
     termsHidden: 'terms-hidden',
     hidden: 'hidden',
-    noScroll: 'noscroll'
+    noScroll: 'noscroll',
+    expanded: 'is-expanded'
   };
 
   el.burger.addEventListener('click', () => {
@@ -38,6 +40,12 @@ const init = () => {
     el.termsOverlay.classList.add(classes.hidden);
     el.termsContent.classList.add(classes.termsHidden);
     document.body.classList.remove(classes.noScroll);
+  });
+
+  [...el.accordionItems].forEach((item) => {
+    item.addEventListener('click', ({ currentTarget }) => {
+      currentTarget.classList.toggle(classes.expanded);
+    });
   });
 
   console.log('app initialized...');

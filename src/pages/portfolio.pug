@@ -114,7 +114,7 @@ block content
             .mb-10(class="desktop:text-xl desktop:pr-30")
                 | Lynxcap Investment Software Application or LISA for short is our proprietary platform that allows us to achieve operational and cost efficiency.
             .mb-10
-                img.size-full(src=require("../assets/laptop.png"))
+                img.w-full(src=require("../assets/laptop.png"))
 
         .mb-10(class="desktop:grid desktop:grid-cols-3 desktop:gap-10 large:gap-14")                        
             .mb-10
@@ -133,13 +133,41 @@ block content
                 div(class="desktop:text-xl")
                     | By harnessing the power of data   we ensure that our investments are backed by thorough analysis and insights driving growth and value in every acquisition we undertake.                                           
                                         
-        h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
-            | Core reports
-        div(class="desktop:grid desktop:grid-cols-2 desktop:mb-6")    
-            .mb-10(class="desktop:text-xl desktop:pr-30")
-                | test
-            .mb-10
-                img.size-full(src=require("../assets/monitor.png"))                                                                                                                                                 
+        div(class="desktop:flex desktop:mb-6")    
+            .mb-10(class="desktop:order-2 desktop:w-1/2 desktop:pt-22")
+                img.w-full(src=require("../assets/monitor.png"))                                                                                                                                                 
+            .mb-10(class="desktop:text-xl desktop:pr-30 desktop:w-1/2 desktop:order-1")
+                h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
+                    | Core reports
+                ul.accordion
+                    li(data-id="accordion-item")
+                        .accordion-icon
+                            +svg-icon(svg-icon-name='chevron-down')
+                        hr.border-dark-blue
+                        .py-6
+                            .text-2xl.font-medium Collection report
+                            .accordion-content(class="desktop:text-xl") Comparison of collections vs forecast on portfolio level, payer analysis and investment return analysis
+                    li(data-id="accordion-item")
+                        .accordion-icon
+                            +svg-icon(svg-icon-name='chevron-down')
+                        hr.border-dark-blue
+                        .py-6
+                            .text-2xl.font-medium Asset Base
+                            .accordion-content(class="desktop:text-xl") Overview of assets in ownership resp. claim collaterals, info on valuations, upcoming and past auctions, sales
+                    li(data-id="accordion-item")
+                        .accordion-icon
+                            +svg-icon(svg-icon-name='chevron-down')
+                        hr.border-dark-blue
+                        .py-6
+                            .text-2xl.font-medium Case Overview
+                            .accordion-content(class="desktop:text-xl") Full overview of selected claims, borrowers or borrower groups including collections, forecasts, dynamic core data, etc
+                    li(data-id="accordion-item")
+                        .accordion-icon
+                            +svg-icon(svg-icon-name='chevron-down')
+                        hr.border-dark-blue
+                        .py-6
+                            .text-2xl.font-medium Pipeline
+                            .accordion-content(class="desktop:text-xl") Overview of the current LynxCap investment pipeline
 
 block footer
     include ../components/footer-hero2.pug
