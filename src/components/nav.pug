@@ -8,7 +8,7 @@ mixin nav(current_page)
                 .nav-links(class="hidden desktop:block")
                     ul.flex.text-base.font-medium
                         li.pr-5
-                            a(href="#") Bonds
+                            a(href="bonds.html", class=(current_page === "bonds" && "is-active")) Bonds
                         li.pr-5
                             a(href="news.html", class=(current_page === "news" && "is-active")) News
                         li.pr-5
@@ -36,7 +36,7 @@ mixin nav(current_page)
         .p-16
             ul.text-center.font-serif.text-3xl
                 li.pb-10
-                    a(href="#") Bonds
+                    a(href="bonds.html") Bonds
                 li.pb-10
                     a(href="news.html") News
                 li.pb-10
