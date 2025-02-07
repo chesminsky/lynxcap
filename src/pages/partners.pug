@@ -1,0 +1,54 @@
+extends ../layout/layout.pug
+
+block variables
+    - var current_page = 'partners'
+
+block content
+    .mx-auto.container.wh-container
+        h1.text-4xl.font-serif.mb-10(class="desktop:text-6xl desktop:mb-14")
+            | 20+ Partners from more than
+            br
+            | 10 jurisdictions
+
+        .plane-banner                                              
+                
+        .mb-20(class="desktop:mb-24 desktop:grid desktop:grid-cols-3")
+            .col-span-2.mb-10
+                div(class="desktop:text-xl desktop:pr-30")
+                    | We pride ourselves on the strong relationships that have been built with a diverse array of institutional and professional investors.  
+                    br
+                    br
+                    | Additionally, we collaborate closely with our partners whose expertise and support assist us in our acquisitions and enable us to consistently deliver for all our stakeholders.
+            .mb-10
+                .font-serif.text-8xl.mb-2
+                    | 15+
+                .font-medium
+                    | years of successful partnerships
+                    br
+                    | with local and global players 
+
+        div(class="desktop:grid desktop:grid-cols-2")
+            .mb-10(class="desktop:mb-20")
+                img.w-9.mb-5(src=require("../assets/p1.svg"), class="desktop:mb-8 desktop:w-15")
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Investors  
+                div(class="desktop:text-xl desktop:pr-30")
+                    | Pension funds, mutual funds, asset managers, HNWI (professional investors)
+            .mb-10(class="desktop:mb-20")
+                img.w-9.mb-5(src=require("../assets/p2.svg"), class="desktop:mb-8 desktop:w-15")
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Services  
+                div(class="desktop:text-xl desktop:pr-30")
+                    | 10+ collections companies and workout specialists which have consistently delivered outstanding results, ensuring smooth collection processes that are fully transparent.    
+            .mb-10(class="desktop:mb-20")
+                img.w-9.mb-5(src=require("../assets/p3.svg"), class="desktop:mb-8 desktop:w-15")
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Legal  
+                div(class="desktop:text-xl desktop:pr-30")
+                    | We partner with a few select, best-in-class legal offices with whom we have established long-term relationships via prior transactions.
+            .mb-10(class="desktop:mb-20")
+                img.w-9.mb-5(src=require("../assets/p4.svg"), class="desktop:mb-8 desktop:w-15")
+                .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
+                    | Audit  
+                div(class="desktop:text-xl desktop:pr-30")
+                    | Lynxcap Investments is audited by PWC and our Luxembourg Securitization Vehicles by Deloitte.  These partnerships underscores our commitment to transparency and accountability.

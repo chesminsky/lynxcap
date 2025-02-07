@@ -11,7 +11,7 @@
 
 @media (min-width: theme('screens.desktop')) {
   .footer-hero {
-    padding: 85px 40px 100px;
+    padding: 85px 0px 100px;
   }
 
   .footer-hero__text {

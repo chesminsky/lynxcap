@@ -8,6 +8,6 @@
 
 @media (min-width: theme('screens.desktop')) {
   .footer {
-    padding: 60px 40px 80px;
+    padding: 60px 0 80px;
   }
 }
