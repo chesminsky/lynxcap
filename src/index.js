@@ -7,7 +7,7 @@ const init = () => {
     mobileNav: document.querySelector('[data-id="mobile-nav"]'),
     termsTrigger: document.querySelector('[data-id="terms-trigger"]'),
     termsOverlay: document.querySelector('[data-id="terms-overlay"]'),
-    termsClose: document.querySelector('[data-id="terms-close"]'),
+    termsClose: document.querySelectorAll('[data-id="terms-close"]'),
     termsContent: document.querySelector('[data-id="terms"]'),
     accordionItems: document.querySelectorAll('[data-id="accordion-item')
   };
@@ -36,10 +36,12 @@ const init = () => {
     });
   });
 
-  el.termsClose.addEventListener('click', () => {
-    el.termsOverlay.classList.add(classes.hidden);
-    el.termsContent.classList.add(classes.termsHidden);
-    document.body.classList.remove(classes.noScroll);
+  [...el.termsClose].forEach((item) => {
+    item.addEventListener('click', () => {
+      el.termsOverlay.classList.add(classes.hidden);
+      el.termsContent.classList.add(classes.termsHidden);
+      document.body.classList.remove(classes.noScroll);
+    });
   });
 
   [...el.accordionItems].forEach((item) => {
