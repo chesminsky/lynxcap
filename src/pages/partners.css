@@ -1,0 +1,13 @@
+.plane-banner {
+  height: 480px;
+  background-image: url('./assets/plane.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+}
+
+@media (min-width: theme('screens.large')) {
+  .plane-banner {
+    background-size: cover;
+  }
+}

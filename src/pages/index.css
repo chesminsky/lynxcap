@@ -71,6 +71,10 @@
       min-height: 690px;
   }
 
+  .header__description {
+    max-width: 380px;
+  }
+
   .performance {
     position: absolute;
   }

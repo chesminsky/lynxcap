@@ -18,7 +18,7 @@ mixin nav(current_page)
                         li.pr-5
                             a(href="#") Portfolio
                         li.pr-5
-                            a(href="#") Partners
+                            a(href="partners.html", class=(current_page === "partners" && "is-active")) Partners
                         li.pr-30
                             a(href="contacts.html", class=(current_page === "contacts" && "is-active")) Contacts
                         li
@@ -46,7 +46,7 @@ mixin nav(current_page)
                 li.pb-10
                     a(href="#") Portfolio
                 li.pb-10
-                    a(href="#") Partners
+                    a(href="partners.html") Partners
             hr
             .text-center.mt-10.font-medium
                 a(href="#") Login
