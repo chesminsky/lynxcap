@@ -74,5 +74,33 @@ block content
                             li.mb-3
                                 span.mr-4.font-medium 6.
                                 span Spain 97.76M        
-        .portfolio-map                                                                                                                                                  
+        .portfolio-map   
+
+        .mb-6    
+            .text-bronze-1.flex.items-center
+                +svg-icon(svg-icon-name='vector')
+                span.text-2xl.ml-1.font-medium
+                    | Real Estate Values by Type
+   
+        h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
+            | Our holdings include a mix of real estate
+        div(class="desktop:grid desktop:grid-cols-2")    
+            .mb-10(class="desktop:text-xl desktop:pr-30")
+                | Our holdings include a mix of real estate back claims and real estate owned assets encompassing land, residential and commercial properties.
+            .mb-10
+                div(class="desktop:flex")
+                    .mb-10(class="desktop:pr-15")
+                        img(src=require("../assets/pie2.svg"))
+                    .mb-10 
+                        ol(class="desktop:text-xl")
+                            li.mb-3
+                                span.mr-4.font-medium 1.
+                                span Land 18.68M
+                            li.mb-3
+                                span.mr-4.font-medium 2.
+                                span Commercial 41.93M
+                            li.mb-3
+                                span.mr-4.font-medium 3.
+                                span Residential 70.91M
+                                                                                                                                                
 
