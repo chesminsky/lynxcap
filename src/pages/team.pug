@@ -1,5 +1,8 @@
 extends ../layout/layout.pug
 
+block variables
+    - var current_page = 'team'
+
 block header
     header.header.team-header
         .container.mx-auto.relative
@@ -15,7 +18,7 @@ block content
             - var n = 0
             while n < 13
                 - n++
-                div.team-grid-cell 
+                div.team-grid-cell(data-id="team-trigger")
                     img.size-full(src=require("../assets/team1.png"))
                     div.team-grid-cell-info 
                         h4.text-l.mb-2(class="desktop:text-xl") Alexander Zwinger

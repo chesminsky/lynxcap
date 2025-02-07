@@ -1,0 +1,25 @@
+.team {
+  overflow: auto;
+  img {
+    width: 192px;
+    height: auto;
+  }
+  .team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .team {
+    img {
+      width: 128px;
+    }
+    .team-content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}

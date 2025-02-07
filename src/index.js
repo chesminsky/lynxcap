@@ -13,6 +13,10 @@ const init = () => {
     requestOverlay: document.querySelector('[data-id="request-modal-overlay"]'),
     requestModalTrigger: document.querySelector('[data-id="request-modal-trigger"]'),
     requestModalClose: document.querySelectorAll('[data-id="request-modal-close"]'),
+    teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]'),
+    teamModalClose: document.querySelectorAll('[data-id="team-close"]'),
+    teamModalOverlay: document.querySelector('[data-id="team-overlay"]'),
+    teamContent: document.querySelector('[data-id="team"]')
   };
 
   const classes = {
@@ -43,8 +47,41 @@ const init = () => {
     closeRequestModal() {
       elements.requestOverlay.classList.add(classes.hidden);
       document.body.classList.remove(classes.noScroll);
+    },
+
+    openTeamModal() {
+      elements.teamModalOverlay.classList.remove(classes.hidden);
+      document.body.classList.add(classes.noScroll);
+      setTimeout(() => {
+        elements.teamContent.classList.remove(classes.termsHidden);
+      });
+    },
+    closeTeamModal() {
+      elements.teamModalOverlay.classList.add(classes.hidden);
+      elements.teamContent.classList.add(classes.termsHidden);
+      document.body.classList.remove(classes.noScroll);
     }
-  }
+
+    // openTeamModal() {
+    //   elements.teamModalOverlay.classList.remove(classes.hidden);
+    //   document.body.classList.add(classes.noScroll);
+    // },
+    // closeTeamModal() {
+    //   elements.requestOverlay.classList.add(classes.hidden);
+    //   document.body.classList.remove(classes.noScroll);
+    // }
+  };
+
+  [...elements.teamModalTrigger].forEach((item) => {
+    item.addEventListener('click', () => {
+      app.openTeamModal();
+    });
+  });
+  [...elements.teamModalClose].forEach((item) => {
+    item.addEventListener('click', () => {
+      app.closeTeamModal();
+    });
+  });
 
   elements.burger.addEventListener('click', () => {
     elements.mobileNav.classList.remove(classes.menuHidden);

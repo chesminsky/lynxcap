@@ -13,6 +13,7 @@
 @import './components/footer-hero.css';
 @import './components/terms.css';
 @import './components/request-modal.css';
+@import './components/team-modal.css';
 
 /* pages */
 @import './pages/index.css';
