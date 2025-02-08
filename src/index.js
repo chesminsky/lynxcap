@@ -61,15 +61,6 @@ const init = () => {
       elements.teamContent.classList.add(classes.termsHidden);
       document.body.classList.remove(classes.noScroll);
     }
-
-    // openTeamModal() {
-    //   elements.teamModalOverlay.classList.remove(classes.hidden);
-    //   document.body.classList.add(classes.noScroll);
-    // },
-    // closeTeamModal() {
-    //   elements.requestOverlay.classList.add(classes.hidden);
-    //   document.body.classList.remove(classes.noScroll);
-    // }
   };
 
   [...elements.teamModalTrigger].forEach((item) => {
