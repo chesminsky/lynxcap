@@ -17,6 +17,7 @@ img {
   border: 1px solid var(--color-dark-blue);
   cursor: pointer;
   transition: all 0.3s;
+  font-weight: 500;
   &:hover {
     background: var(--color-violet-1);
     border-color: var(--color-violet-1);
@@ -31,8 +32,14 @@ img {
 
 .zoomable {
   .img-wrap {
-    max-width: 300px;
+    max-width: 50%;
     overflow: hidden;
+  }
+
+  @media (min-width: theme('screens.desktop')) {
+    .img-wrap {
+      max-width: 100%;
+    }
   }
 
   img {

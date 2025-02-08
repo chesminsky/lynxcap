@@ -3,17 +3,17 @@
   background-size: cover;
   padding: 48px 16px;
   position: relative;
-  min-height: 472px;
 }
 
 @media (min-width: theme('screens.desktop')) {
   .blue-banner {
-    padding: 72px 100px;
+    padding: 72px 100px 50px;
   }
 }
 
 .map {
     padding: 10px 0;
+    opacity: .7;
     img {
         max-width: 100%;
     }

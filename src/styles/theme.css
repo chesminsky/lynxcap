@@ -26,6 +26,9 @@
   --font-serif: 'ivar', serif;
   --font-sans: 'larsseit', sans-serif;
 
+  /* 28 px */
+  --text-2xl: 1.75rem; 
+
   --breakpoint-*: initial;
   --breakpoint-desktop: 1180px;
   --breakpoint-large: 1370px;

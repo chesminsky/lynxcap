@@ -3,18 +3,18 @@ import './index.css';
 const init = () => {
   const elements = {
     burger: document.querySelector('[data-id="open-nav"]'),
-    close: document.querySelector('[data-id="close-nav"]'),
+    closeNav: document.querySelector('[data-id="close-nav"]'),
     mobileNav: document.querySelector('[data-id="mobile-nav"]'),
     termsTrigger: document.querySelector('[data-id="terms-trigger"]'),
     termsOverlay: document.querySelector('[data-id="terms-overlay"]'),
-    termsClose: document.querySelectorAll('[data-id="terms-close"]'),
+    termsClose: document.querySelectorAll('[data-id="terms-close"]') || [],
     termsContent: document.querySelector('[data-id="terms"]'),
-    accordionItems: document.querySelectorAll('[data-id="accordion-item'),
+    accordionItems: document.querySelectorAll('[data-id="accordion-item') || [],
     requestOverlay: document.querySelector('[data-id="request-modal-overlay"]'),
     requestModalTrigger: document.querySelector('[data-id="request-modal-trigger"]'),
-    requestModalClose: document.querySelectorAll('[data-id="request-modal-close"]'),
-    teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]'),
-    teamModalClose: document.querySelectorAll('[data-id="team-close"]'),
+    requestModalClose: document.querySelectorAll('[data-id="request-modal-close"]') || [],
+    teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]') || [],
+    teamModalClose: document.querySelectorAll('[data-id="team-close"]') || [],
     teamModalOverlay: document.querySelector('[data-id="team-overlay"]'),
     teamContent: document.querySelector('[data-id="team"]')
   };
@@ -29,36 +29,36 @@ const init = () => {
 
   const app = {
     openTerms() {
-      elements.termsOverlay.classList.remove(classes.hidden);
-      document.body.classList.add(classes.noScroll);
+      elements.termsOverlay?.classList.remove(classes.hidden);
+      document.body?.classList.add(classes.noScroll);
       setTimeout(() => {
-        elements.termsContent.classList.remove(classes.termsHidden);
+        elements.termsContent?.classList.remove(classes.termsHidden);
       });
     },
     closeTerms() {
-      elements.termsOverlay.classList.add(classes.hidden);
-      elements.termsContent.classList.add(classes.termsHidden);
+      elements.termsOverlay?.classList.add(classes.hidden);
+      elements.termsContent?.classList.add(classes.termsHidden);
       document.body.classList.remove(classes.noScroll);
     },
     openRequestModal() {
-      elements.requestOverlay.classList.remove(classes.hidden);
+      elements.requestOverlay?.classList.remove(classes.hidden);
       document.body.classList.add(classes.noScroll);
     },
     closeRequestModal() {
-      elements.requestOverlay.classList.add(classes.hidden);
+      elements.requestOverlay?.classList.add(classes.hidden);
       document.body.classList.remove(classes.noScroll);
     },
 
     openTeamModal() {
-      elements.teamModalOverlay.classList.remove(classes.hidden);
+      elements.teamModalOverlay?.classList.remove(classes.hidden);
       document.body.classList.add(classes.noScroll);
       setTimeout(() => {
-        elements.teamContent.classList.remove(classes.termsHidden);
+        elements.teamContent?.classList.remove(classes.termsHidden);
       });
     },
     closeTeamModal() {
-      elements.teamModalOverlay.classList.add(classes.hidden);
-      elements.teamContent.classList.add(classes.termsHidden);
+      elements.teamModalOverlay?.classList.add(classes.hidden);
+      elements.teamContent?.classList.add(classes.termsHidden);
       document.body.classList.remove(classes.noScroll);
     }
   };
@@ -74,15 +74,15 @@ const init = () => {
     });
   });
 
-  elements.burger.addEventListener('click', () => {
-    elements.mobileNav.classList.remove(classes.menuHidden);
+  elements.burger?.addEventListener('click', () => {
+    elements.mobileNav?.classList.remove(classes.menuHidden);
   });
 
-  elements.close.addEventListener('click', () => {
-    elements.mobileNav.classList.add(classes.menuHidden);
+  elements.closeNav?.addEventListener('click', () => {
+    elements.mobileNav?.classList.add(classes.menuHidden);
   });
 
-  elements.termsTrigger.addEventListener('click', () => {
+  elements.termsTrigger?.addEventListener('click', () => {
     app.openTerms();
   });
 
@@ -98,7 +98,7 @@ const init = () => {
     });
   });
 
-  elements.requestModalTrigger.addEventListener('click', () => {
+  elements.requestModalTrigger?.addEventListener('click', () => {
     app.openRequestModal();
   });
 

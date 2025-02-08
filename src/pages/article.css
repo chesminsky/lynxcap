@@ -30,6 +30,16 @@
       font-size: 16px;
     }
   }
+
+  img {
+    max-width: 85%;
+  }
+
+  @media (min-width: theme('screens.desktop')) {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 @media (min-width: theme('screens.desktop')) {
