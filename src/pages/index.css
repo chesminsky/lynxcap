@@ -68,7 +68,7 @@
       background-repeat: no-repeat;
       background-image: url('./assets/snow-bg-large.jpg');
       background-position: calc(50% + 318px) calc(50% - 43px);
-      min-height: 690px;
+      min-height: 625px;
   }
 
   .header__description {
@@ -160,6 +160,13 @@
     background-position: 50% 70%;
     background-size: cover;
   }
+
+  .header__content {
+    padding-left: 220px;
+  }
+  .performance {
+    right: 200px;
+  }
 }
 
 .banner {
@@ -170,7 +177,7 @@
 
 @media (min-width: theme('screens.desktop')) {
   .banner {
-    padding: 60px;
+    padding: 90px 60px;
   }
 }
 

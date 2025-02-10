@@ -13,9 +13,9 @@ block content
         .buildings-banner                                              
         div(class="desktop:grid desktop:grid-cols-3")
             .mb-10(class="desktop:mb-15")
-                div(class="desktop:text-xl desktop:pr-30")
+                .text-xl(class="desktop:text-2xl")
                     | Our holdings consist of real estate backed claims and real estate owned assets including performing assets.
-            div
+            div(class="desktop:pl-30")
                 .mb-10(class="desktop:mb-15")
                     .font-serif.text-8xl.mb-2
                         span.text-grey-4
@@ -28,7 +28,7 @@ block content
                         span 28.6%
                     .font-medium
                         | Net Debt to MV   
-            div
+            div(class="desktop:pl-30")
                 .mb-10(class="desktop:mb-15")
                     .font-serif.text-8xl.mb-2
                         span >500
@@ -40,15 +40,16 @@ block content
                     .font-medium
                         | portfolios acquired  in 5 jurisdictions since 2019
         .mb-6    
-            .text-bronze-1.flex.items-center
-                +svg-icon(svg-icon-name='vector')
-                span.text-2xl.ml-1.font-medium
+            .text-bronze-1.flex
+                .pt-2
+                    +svg-icon(svg-icon-name='vector')
+                span.text-2xl.ml-2.font-medium
                     | Real Estate Values by Country
                 
-        h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
+        h2.portfolio-subheader.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
             | We specialize in managing a diversified portfolio in Europe   
         div(class="desktop:grid desktop:grid-cols-2")    
-            .mb-10(class="desktop:text-xl desktop:pr-30")
+            .mb-10(class="desktop:text-2xl desktop:pr-30")
                 | that are geographically stratified, encompassing key markets. This strategic distribution mitigates risk and enables us to leverage our regional expertise to unlock the potential of each asset.
             .mb-10
                 div(class="desktop:flex")
@@ -77,15 +78,16 @@ block content
         .portfolio-map   
 
         .mb-6    
-            .text-bronze-1.flex.items-center
-                +svg-icon(svg-icon-name='vector')
-                span.text-2xl.ml-1.font-medium
+            .text-bronze-1.flex
+                .pt-2
+                    +svg-icon(svg-icon-name='vector')
+                span.text-2xl.ml-2.font-medium
                     | Real Estate Values by Type
    
         h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
             | Our holdings include a mix of real estate
         div(class="desktop:grid desktop:grid-cols-2")    
-            .mb-10(class="desktop:text-xl desktop:pr-30")
+            .mb-10(class="desktop:text-2xl desktop:pr-30")
                 | Our holdings include a mix of real estate back claims and real estate owned assets encompassing land, residential and commercial properties.
             .mb-10
                 div(class="desktop:flex")
@@ -104,14 +106,15 @@ block content
                                 span Residential 70.91M
                                                                                                                                                 
         .mb-6    
-            .text-bronze-1.flex.items-center
-                +svg-icon(svg-icon-name='vector')
-                span.text-2xl.ml-1.font-medium
+            .text-bronze-1.flex
+                .pt-2
+                    +svg-icon(svg-icon-name='vector')
+                span.text-2xl.ml-2.font-medium
                     | Portfolio Management
         h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
             | Meet our platform LISA
         div(class="desktop:grid desktop:grid-cols-2 desktop:mb-6")    
-            .mb-10(class="desktop:text-xl desktop:pr-30")
+            .mb-10(class="desktop:text-2xl desktop:pr-30")
                 | Lynxcap Investment Software Application or LISA for short is our proprietary platform that allows us to achieve operational and cost efficiency.
             .mb-10
                 img.w-full(src=require("../assets/laptop.png"))
@@ -140,7 +143,7 @@ block content
                 h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-10")
                     | Core reports
                 ul.accordion
-                    li(data-id="accordion-item")
+                    li.is-expanded(data-id="accordion-item")
                         .accordion-icon
                             +svg-icon(svg-icon-name='chevron-down')
                         hr.border-dark-blue

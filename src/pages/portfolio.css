@@ -1,10 +1,18 @@
 .buildings-banner {
-  height: 480px;
+  height: 372px;
   background-image: url('./assets/buildings.png');
   background-position: center center;
   background-repeat: no-repeat;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
+
+@media (min-width: theme('screens.desktop')) {
+  .buildings-banner {
+    margin-bottom: 60px;
+    height: 480px;
+  }
+}
+
 
 @media (min-width: theme('screens.large')) {
   .buildings-banner {
@@ -21,6 +29,10 @@
   margin-bottom: 100px;
   margin-left: -16px;
   margin-right: -16px;
+}
+
+.portfolio-subheader {
+  max-width: 1000px;
 }
 
 @media (min-width: theme('screens.desktop')) {

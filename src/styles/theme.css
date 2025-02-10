@@ -28,6 +28,8 @@
 
   /* 28 px */
   --text-2xl: 1.75rem; 
+  --text-5xl: 3.5rem; 
+  --text-6xl: 5rem; 
 
   --breakpoint-*: initial;
   --breakpoint-desktop: 1180px;

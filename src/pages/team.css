@@ -35,12 +35,12 @@
     .header__description {
       max-width: 770px;
     }
+    .header__content {
+      padding-left: 0;
+    }
   }
   .team-container {
     padding: 0;
-  }
-  .header__content {
-    padding-left: 0;
   }
   .team-grid {
     display: grid;

@@ -4,6 +4,10 @@
   hr {
     border-color: var(--color-grey-5);
   }
+
+  a:hover {
+    color: var(--color-violet-2);
+  }
 }
 
 @media (min-width: theme('screens.desktop')) {
