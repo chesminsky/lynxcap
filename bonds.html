@@ -143,12 +143,12 @@
                   <div class="font-serif text-8xl mb-2">12</div>
                   <div class="font-medium">bonds open to investors</div>
                 </div>
-              </div><a class="anchor-button mt-14" href="#"><span>See Bond repayment table</span>
+              </div><span class="anchor-button mt-14" data-id="bonds-modal-trigger"><span>See Bond repayment table</span>
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate(10,10)">
     <path d="M9.83496 17.4893L17.835 9.48926M17.835 9.48926L9.83496 1.48926M17.835 9.48926H1.83496" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </g>
-</svg></a>
+</svg></span>
             </div>
           </div>
         </div>
@@ -419,6 +419,146 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="overlay overlay-modal hidden" data-id="bonds-modal-overlay">
+        <form class="modal bonds-modal">
+          <div class="modal__close">
+            <div class="cursor-pointer" data-id="bonds-modal-close">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            </div>
+          </div>
+          <div class="modal__body">
+            <h2 class="text-4xl font-serif mb-6">Bonds paid out to date</h2>
+            <div class="table-wrap" data-id="bonds-modal-scrollable">
+              <table class="bonds-table text-sm">
+                <tr>
+                  <th>Bonds</th>
+                  <th>Isin code</th>
+                  <th>Rank</th>
+                  <th>Amount issued (EUR)</th>
+                  <th>Type</th>
+                  <th>Beginning of remuneration</th>
+                  <th>Maturity</th>
+                  <th>Issue price</th>
+                  <th>Bid price</th>
+                </tr>
+                <tr>
+                  <td>APK1</td>
+                  <td>SI0032103887</td>
+                  <td>Secured</td>
+                  <td>3 400 093</td>
+                  <td>Amortised</td>
+                  <td>05.06.2019</td>
+                  <td>05.06.2019</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APP1</td>
+                  <td>SI0032104018</td>
+                  <td>Unsecured</td>
+                  <td>1 703 252</td>
+                  <td>Amortised</td>
+                  <td>27.06.2020</td>
+                  <td>27.06.2020</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APP2</td>
+                  <td>SI0032104158</td>
+                  <td>Senior Secured</td>
+                  <td>3 000 000</td>
+                  <td>Amortised</td>
+                  <td>20.04.2021</td>
+                  <td>20.04.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APP3</td>
+                  <td>SI0032104158</td>
+                  <td>Junior with priority</td>
+                  <td>1 000 000</td>
+                  <td>Amortised</td>
+                  <td>20.04.2021</td>
+                  <td>20.04.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APP3</td>
+                  <td>SI0032104166</td>
+                  <td>Junior</td>
+                  <td>1 500 000</td>
+                  <td>Amortised</td>
+                  <td>20.04.2021</td>
+                  <td>20.04.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APP3</td>
+                  <td>SI0032104166</td>
+                  <td>Junior Unsecured</td>
+                  <td>500 000</td>
+                  <td>Amortised</td>
+                  <td>20.04.2021</td>
+                  <td>20.04.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APT1</td>
+                  <td>SI0032104083</td>
+                  <td>Senior Secured</td>
+                  <td>2 000 000</td>
+                  <td>Amortised</td>
+                  <td>15.01.2021</td>
+                  <td>15.01.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>APT2</td>
+                  <td>SI0032104091</td>
+                  <td>Junior</td>
+                  <td>2 000 000</td>
+                  <td>Amortised</td>
+                  <td>15.01.2021</td>
+                  <td>15.01.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>AKK 5</td>
+                  <td>-</td>
+                  <td>Senior Secured</td>
+                  <td>2 880 000</td>
+                  <td>Amortised</td>
+                  <td>03.03.2021</td>
+                  <td>03.03.2021</td>
+                  <td>100.00</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>Insight Investments facility</td>
+                  <td>-</td>
+                  <td>Sr. Secured</td>
+                  <td>10 000 000</td>
+                  <td>Amortised</td>
+                  <td>30.10.2021</td>
+                  <td>30.10.2021</td>
+                  <td>100.00</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
