@@ -1,0 +1,85 @@
+.bonds-modal {
+  background: white;
+  padding: 50px 0 0 16px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .bonds-modal {
+    position: relative;
+    padding: 40px;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.bonds-table {
+  table-layout: fixed;
+  width: calc(8 * 140px);
+  th,
+  td {
+    width: 140px;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+  }
+
+  th {
+    padding: 14px 12px;
+  }
+
+  td {
+    padding: 24px 12px;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-grey-5);
+  }
+}
+
+.table-wrap {
+  max-height: calc(100vh - 142px);
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+th:first-child,
+td:first-child {
+  position: sticky;
+  left: 0;
+  background: white; /* Ensures first column does not become transparent */
+  z-index: 2; /* Keeps the first column above other cells */
+}
+
+.table-shifted {
+  th:first-child,
+  td:first-child {
+    &::after {
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 10px;
+      box-shadow: 4px 0px 4px 0px #0000001a;
+      display: block;
+      position: absolute;
+    }
+  }
+}
+
+tr:first-child th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 3; 
+}
+
+tr:first-child th:first-child {
+  z-index: 4;
+}

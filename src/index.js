@@ -5,14 +5,23 @@ const init = () => {
     burger: document.querySelector('[data-id="open-nav"]'),
     closeNav: document.querySelector('[data-id="close-nav"]'),
     mobileNav: document.querySelector('[data-id="mobile-nav"]'),
+
     termsTrigger: document.querySelector('[data-id="terms-trigger"]'),
     termsOverlay: document.querySelector('[data-id="terms-overlay"]'),
     termsClose: document.querySelectorAll('[data-id="terms-close"]') || [],
     termsContent: document.querySelector('[data-id="terms"]'),
+
+    bondsModalTrigger: document.querySelector('[data-id="bonds-modal-trigger"]'),
+    bondsModalOverlay: document.querySelector('[data-id="bonds-modal-overlay"]'),
+    bondsModalClose: document.querySelector('[data-id="bonds-modal-close"]'),
+    bondsScrollable: document.querySelector('[data-id="bonds-modal-scrollable"]'),
+    
     accordionItems: document.querySelectorAll('[data-id="accordion-item') || [],
+
     requestOverlay: document.querySelector('[data-id="request-modal-overlay"]'),
     requestModalTrigger: document.querySelector('[data-id="request-modal-trigger"]'),
     requestModalClose: document.querySelectorAll('[data-id="request-modal-close"]') || [],
+    
     teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]') || [],
     teamModalClose: document.querySelectorAll('[data-id="team-close"]') || [],
     teamModalOverlay: document.querySelector('[data-id="team-overlay"]'),
@@ -24,7 +33,8 @@ const init = () => {
     termsHidden: 'terms-hidden',
     hidden: 'hidden',
     noScroll: 'noscroll',
-    expanded: 'is-expanded'
+    expanded: 'is-expanded',
+    tableShifted: 'table-shifted'
   };
 
   const app = {
@@ -59,6 +69,15 @@ const init = () => {
     closeTeamModal() {
       elements.teamModalOverlay?.classList.add(classes.hidden);
       elements.teamContent?.classList.add(classes.termsHidden);
+      document.body.classList.remove(classes.noScroll);
+    },
+
+    openBondsModal() {
+      elements.bondsModalOverlay?.classList.remove(classes.hidden);
+      document.body.classList.add(classes.noScroll);
+    },
+    closeBondsModal() {
+      elements.bondsModalOverlay?.classList.add(classes.hidden);
       document.body.classList.remove(classes.noScroll);
     }
   };
@@ -108,9 +127,27 @@ const init = () => {
     });
   });
 
+  elements.bondsModalTrigger?.addEventListener('click', () => {
+    app.openBondsModal();
+    elements.bondsScrollable.addEventListener('scroll', handleHorizontalScroll);
+  });
+
+  elements.bondsModalClose.addEventListener('click', () => {
+    elements.bondsScrollable.removeEventListener('scroll', handleHorizontalScroll);
+    app.closeBondsModal();
+  });
+
   console.log('app initialized...');
 
   window.app = app;
+
+  function handleHorizontalScroll({ target }) {
+    if (target.scrollLeft > 0) {
+      target.classList.add(classes.tableShifted);
+    } else {
+      target.classList.remove(classes.tableShifted);
+    }
+  }
 };
 
 document.addEventListener('DOMContentLoaded', init);
