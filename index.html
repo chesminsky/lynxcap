@@ -210,7 +210,7 @@
   <div class="text-grey-4 text-sm">© LynxCap Group. All Rights Reserved.</div>
 </div>
       <div class="overlay hidden" data-id="terms-overlay">
-        <div class="terms terms-hidden" data-id="terms">
+        <div class="terms sidemodal-hidden" data-id="terms">
           <div class="terms__header">
             <div class="flex px-5 pt-5 items-center justify-end">
               <div class="cursor-pointer" data-id="terms-close">
@@ -296,7 +296,7 @@
         </form>
       </div>
       <div class="overlay hidden" data-id="team-overlay">
-        <div class="terms terms-hidden team" data-id="team">
+        <div class="terms sidemodal-hidden team" data-id="team">
           <div class="terms__header">
             <div class="flex px-5 pt-5 items-center justify-end">
               <div class="cursor-pointer" data-id="team-close">
@@ -316,10 +316,10 @@
           </div>
         </div>
       </div>
-      <div class="overlay overlay-modal hidden" data-id="bonds-modal-overlay">
+      <div class="overlay overlay-modal hidden" data-id="bonds-payments-modal-overlay">
         <form class="modal bonds-modal">
           <div class="modal__close">
-            <div class="cursor-pointer" data-id="bonds-modal-close">
+            <div class="cursor-pointer" data-id="bonds-payments-modal-close">
 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -328,7 +328,7 @@
           </div>
           <div class="modal__body">
             <h2 class="text-4xl font-serif mb-6">Bonds paid out to date</h2>
-            <div class="table-wrap" data-id="bonds-modal-scrollable">
+            <div class="table-wrap" data-id="bonds-payments-modal-scrollable">
               <table class="bonds-table text-sm">
                 <tr>
                   <th>Bonds</th>
@@ -450,6 +450,102 @@
                   <td>30.10.2021</td>
                   <td>100.00</td>
                   <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="overlay overlay-modal hidden" data-id="bonds-tranches-modal-overlay">
+        <form class="modal bonds-modal">
+          <div class="modal__close">
+            <div class="cursor-pointer" data-id="bonds-tranches-modal-close">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.8457 1.15405L11.0725 11.1008L1.29932 1.15405" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M1.15426 20.8464L10.9275 10.8996L20.7007 20.8464" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            </div>
+          </div>
+          <div class="modal__body">
+            <h2 class="text-4xl font-serif mb-6">Bond tranches</h2>
+            <div class="table-wrap" data-id="bonds-tranches-modal-scrollable">
+              <table class="bonds-table text-sm"> 
+                <tr>
+                  <th>Bonds</th>
+                  <th>Isin code</th>
+                  <th>Rank</th>
+                  <th>Amount issued (EUR)</th>
+                  <th>Type</th>
+                  <th>Coupon</th>
+                  <th>Beginning of remuneration</th>
+                  <th>Maturity</th>
+                  <th>Issue price</th>
+                </tr>
+                <tr>
+                  <td>EUR 9.00 LCL OPPORT LUX (REG$/A) 22-2026</td>
+                  <td>XS2514450100</td>
+                  <td>Senior Secured</td>
+                  <td>18,000,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>9%</td>
+                  <td>14.07.2022</td>
+                  <td>05.08.2026</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>EUR 12.00 LCL OPPORT LUX (REG$/B) 22-2026</td>
+                  <td>XS2514450755</td>
+                  <td>Junior</td>
+                  <td>2,000,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>12%</td>
+                  <td>14.07.2022</td>
+                  <td>05.08.2026</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>EUR 9.00 LCL OPPORT LUX (REG$/A) 22-2026</td>
+                  <td>XS2514450100</td>
+                  <td>Senior Secured</td>
+                  <td>9,000,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>9%</td>
+                  <td>20.12.2022</td>
+                  <td>05.08.2026</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>EUR 12.00 LCL OPPORT LUX (REG$/B) 22-2026</td>
+                  <td>XS2514450755</td>
+                  <td>Junior</td>
+                  <td>1,000,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>12%</td>
+                  <td>22.12.2022</td>
+                  <td>05.08.2026</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>UNT LCL OPPORT LUX (C) 120627</td>
+                  <td>XS2637164265</td>
+                  <td>Senior Secured</td>
+                  <td>3,150,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>11%</td>
+                  <td>12.06.2023</td>
+                  <td>12.06.2027</td>
+                  <td>100.00</td>
+                </tr>
+                <tr>
+                  <td>UNT LCL OPPORT LUX (C) 120627</td>
+                  <td>XS2637165072</td>
+                  <td>Junior</td>
+                  <td>350,000</td>
+                  <td>Fixed/Bullet</td>
+                  <td>14%</td>
+                  <td>12.06.2023</td>
+                  <td>12.06.2027</td>
+                  <td>100.00</td>
                 </tr>
               </table>
             </div>
