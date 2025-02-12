@@ -1,0 +1,80 @@
+.overlay.overlay-modal.hidden(data-id="bonds-tranches-modal-overlay")
+    form.modal.bonds-modal
+        .modal__close
+            .cursor-pointer(data-id="bonds-tranches-modal-close")
+                +svg-icon(svg-icon-name='close')
+        .modal__body
+            h2.text-4xl.font-serif.mb-6
+                | Bond tranches
+            .table-wrap(data-id="bonds-tranches-modal-scrollable")
+                table.bonds-table.text-sm 
+                    tr
+                        th Bonds
+                        th Isin code
+                        th Rank
+                        th Amount issued (EUR)
+                        th Type
+                        th Coupon
+                        th Beginning of remuneration
+                        th Maturity
+                        th Issue price
+                    tr
+                        td EUR 9.00 LCL OPPORT LUX (REG$/A) 22-2026
+                        td XS2514450100
+                        td Senior Secured
+                        td 18,000,000
+                        td Fixed/Bullet
+                        td 9%
+                        td 14.07.2022
+                        td 05.08.2026
+                        td 100.00
+                    tr
+                        td EUR 12.00 LCL OPPORT LUX (REG$/B) 22-2026
+                        td XS2514450755
+                        td Junior
+                        td 2,000,000
+                        td Fixed/Bullet
+                        td 12%
+                        td 14.07.2022
+                        td 05.08.2026
+                        td 100.00
+                    tr
+                        td EUR 9.00 LCL OPPORT LUX (REG$/A) 22-2026
+                        td XS2514450100
+                        td Senior Secured
+                        td 9,000,000
+                        td Fixed/Bullet
+                        td 9%
+                        td 20.12.2022
+                        td 05.08.2026
+                        td 100.00
+                    tr
+                        td EUR 12.00 LCL OPPORT LUX (REG$/B) 22-2026
+                        td XS2514450755
+                        td Junior
+                        td 1,000,000
+                        td Fixed/Bullet
+                        td 12%
+                        td 22.12.2022
+                        td 05.08.2026
+                        td 100.00
+                    tr
+                        td UNT LCL OPPORT LUX (C) 120627
+                        td XS2637164265
+                        td Senior Secured
+                        td 3,150,000
+                        td Fixed/Bullet
+                        td 11%
+                        td 12.06.2023
+                        td 12.06.2027
+                        td 100.00
+                    tr
+                        td UNT LCL OPPORT LUX (C) 120627
+                        td XS2637165072
+                        td Junior
+                        td 350,000
+                        td Fixed/Bullet
+                        td 14%
+                        td 12.06.2023
+                        td 12.06.2027
+                        td 100.00

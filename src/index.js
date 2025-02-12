@@ -11,10 +11,15 @@ const init = () => {
     termsClose: document.querySelectorAll('[data-id="terms-close"]') || [],
     termsContent: document.querySelector('[data-id="terms"]'),
 
-    bondsModalTrigger: document.querySelector('[data-id="bonds-modal-trigger"]'),
-    bondsModalOverlay: document.querySelector('[data-id="bonds-modal-overlay"]'),
-    bondsModalClose: document.querySelector('[data-id="bonds-modal-close"]'),
-    bondsScrollable: document.querySelector('[data-id="bonds-modal-scrollable"]'),
+    bondsPaymentsModalTrigger: document.querySelector('[data-id="bonds-payments-modal-trigger"]'),
+    bondsPaymentsModalOverlay: document.querySelector('[data-id="bonds-payments-modal-overlay"]'),
+    bondsPaymentsModalClose: document.querySelector('[data-id="bonds-payments-modal-close"]'),
+    bondsPaymentsScrollable: document.querySelector('[data-id="bonds-payments-modal-scrollable"]'),
+
+    bondsTranchesModalTrigger: document.querySelector('[data-id="bonds-tranches-modal-trigger"]'),
+    bondsTranchesModalOverlay: document.querySelector('[data-id="bonds-tranches-modal-overlay"]'),
+    bondsTranchesModalClose: document.querySelector('[data-id="bonds-tranches-modal-close"]'),
+    bondsTranchesScrollable: document.querySelector('[data-id="bonds-tranches-modal-scrollable"]'),
 
     accordionItems: document.querySelectorAll('[data-id="accordion-item') || [],
 
@@ -103,15 +108,26 @@ const init = () => {
     });
   });
 
-  // BONDS MODAL
-  elements.bondsModalTrigger?.addEventListener('click', () => {
-    app.openModal(elements.bondsModalOverlay);
-    elements.bondsScrollable.addEventListener('scroll', handleHorizontalScroll);
+  // BONDS PAYMENTS MODAL
+  elements.bondsPaymentsModalTrigger?.addEventListener('click', () => {
+    app.openModal(elements.bondsPaymentsModalOverlay);
+    elements.bondsPaymentsScrollable.addEventListener('scroll', handleHorizontalScroll);
   });
 
-  elements.bondsModalClose.addEventListener('click', () => {
-    elements.bondsScrollable.removeEventListener('scroll', handleHorizontalScroll);
-    app.closeModal(elements.bondsModalOverlay);
+  elements.bondsPaymentsModalClose.addEventListener('click', () => {
+    elements.bondsPaymentsScrollable.removeEventListener('scroll', handleHorizontalScroll);
+    app.closeModal(elements.bondsPaymentsModalOverlay);
+  });
+
+  // BONDS TRANCHES MODAL
+  elements.bondsTranchesModalTrigger?.addEventListener('click', () => {
+    app.openModal(elements.bondsTranchesModalOverlay);
+    elements.bondsTranchesScrollable.addEventListener('scroll', handleHorizontalScroll);
+  });
+
+  elements.bondsTranchesModalClose.addEventListener('click', () => {
+    elements.bondsTranchesScrollable.removeEventListener('scroll', handleHorizontalScroll);
+    app.closeModal(elements.bondsTranchesModalOverlay);
   });
 
   // ACCORDION

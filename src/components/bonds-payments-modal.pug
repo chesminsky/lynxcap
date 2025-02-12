@@ -1,12 +1,12 @@
-.overlay.overlay-modal.hidden(data-id="bonds-modal-overlay")
+.overlay.overlay-modal.hidden(data-id="bonds-payments-modal-overlay")
     form.modal.bonds-modal
         .modal__close
-            .cursor-pointer(data-id="bonds-modal-close")
+            .cursor-pointer(data-id="bonds-payments-modal-close")
                 +svg-icon(svg-icon-name='close')
         .modal__body
             h2.text-4xl.font-serif.mb-6
                 | Bonds paid out to date
-            .table-wrap(data-id="bonds-modal-scrollable")
+            .table-wrap(data-id="bonds-payments-modal-scrollable")
                 table.bonds-table.text-sm
                     tr
                         th Bonds
