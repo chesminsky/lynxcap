@@ -25,11 +25,11 @@
   }
 }
 
-.terms-hidden > * {
+.sidemodal-hidden > * {
   display: none;
 }
 
-.terms-hidden {
+.sidemodal-hidden {
   transform: translateX(100%);
 }
 

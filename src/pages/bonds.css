@@ -48,11 +48,10 @@
   }
   &-container {
     display: flex;
-    flex-direction: row;
-    gap: 140px;
+    flex-direction: column;
+    gap: 32px;
   }
   &-right {
-    display: none;
     flex-direction: column;
 
     &-numbers {
@@ -184,6 +183,10 @@
       margin-top: 124px;
       &-right {
         display: flex;
+      }
+      &-container {
+        flex-direction: row;
+        gap: 140px;
       }
     }
     .bonds-tranches-icon {

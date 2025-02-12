@@ -15,13 +15,13 @@ const init = () => {
     bondsModalOverlay: document.querySelector('[data-id="bonds-modal-overlay"]'),
     bondsModalClose: document.querySelector('[data-id="bonds-modal-close"]'),
     bondsScrollable: document.querySelector('[data-id="bonds-modal-scrollable"]'),
-    
+
     accordionItems: document.querySelectorAll('[data-id="accordion-item') || [],
 
     requestOverlay: document.querySelector('[data-id="request-modal-overlay"]'),
     requestModalTrigger: document.querySelector('[data-id="request-modal-trigger"]'),
     requestModalClose: document.querySelectorAll('[data-id="request-modal-close"]') || [],
-    
+
     teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]') || [],
     teamModalClose: document.querySelectorAll('[data-id="team-close"]') || [],
     teamModalOverlay: document.querySelector('[data-id="team-overlay"]'),
@@ -30,7 +30,7 @@ const init = () => {
 
   const classes = {
     menuHidden: 'menu-hidden',
-    termsHidden: 'terms-hidden',
+    sideModalHidden: 'sidemodal-hidden',
     hidden: 'hidden',
     noScroll: 'noscroll',
     expanded: 'is-expanded',
@@ -38,61 +38,29 @@ const init = () => {
   };
 
   const app = {
-    openTerms() {
-      elements.termsOverlay?.classList.remove(classes.hidden);
-      document.body?.classList.add(classes.noScroll);
-      setTimeout(() => {
-        elements.termsContent?.classList.remove(classes.termsHidden);
-      });
-    },
-    closeTerms() {
-      elements.termsOverlay?.classList.add(classes.hidden);
-      elements.termsContent?.classList.add(classes.termsHidden);
-      document.body.classList.remove(classes.noScroll);
-    },
-    openRequestModal() {
-      elements.requestOverlay?.classList.remove(classes.hidden);
-      document.body.classList.add(classes.noScroll);
-    },
-    closeRequestModal() {
-      elements.requestOverlay?.classList.add(classes.hidden);
-      document.body.classList.remove(classes.noScroll);
-    },
-
-    openTeamModal() {
-      elements.teamModalOverlay?.classList.remove(classes.hidden);
+    openSideModal(overlay, content) {
+      overlay?.classList.remove(classes.hidden);
       document.body.classList.add(classes.noScroll);
       setTimeout(() => {
-        elements.teamContent?.classList.remove(classes.termsHidden);
+        content?.classList.remove(classes.sideModalHidden);
       });
     },
-    closeTeamModal() {
-      elements.teamModalOverlay?.classList.add(classes.hidden);
-      elements.teamContent?.classList.add(classes.termsHidden);
+    closeSideModal(overlay, content) {
+      overlay?.classList.add(classes.hidden);
+      content?.classList.add(classes.sideModalHidden);
       document.body.classList.remove(classes.noScroll);
     },
-
-    openBondsModal() {
-      elements.bondsModalOverlay?.classList.remove(classes.hidden);
+    openModal(overlay) {
+      overlay?.classList.remove(classes.hidden);
       document.body.classList.add(classes.noScroll);
     },
-    closeBondsModal() {
-      elements.bondsModalOverlay?.classList.add(classes.hidden);
+    closeModal(overlay) {
+      overlay?.classList.add(classes.hidden);
       document.body.classList.remove(classes.noScroll);
     }
   };
 
-  [...elements.teamModalTrigger].forEach((item) => {
-    item.addEventListener('click', () => {
-      app.openTeamModal();
-    });
-  });
-  [...elements.teamModalClose].forEach((item) => {
-    item.addEventListener('click', () => {
-      app.closeTeamModal();
-    });
-  });
-
+  // MOBILE NAV
   elements.burger?.addEventListener('click', () => {
     elements.mobileNav?.classList.remove(classes.menuHidden);
   });
@@ -101,40 +69,56 @@ const init = () => {
     elements.mobileNav?.classList.add(classes.menuHidden);
   });
 
+  // TEAMS MODAL
+  [...elements.teamModalTrigger].forEach((item) => {
+    item.addEventListener('click', () => {
+      app.openSideModal(elements.teamModalOverlay, elements.teamContent);
+    });
+  });
+  [...elements.teamModalClose].forEach((item) => {
+    item.addEventListener('click', () => {
+      app.closeSideModal(elements.teamModalOverlay, elements.teamContent);
+    });
+  });
+
+  // TERMS
   elements.termsTrigger?.addEventListener('click', () => {
-    app.openTerms();
+    app.openSideModal(elements.termsOverlay, elements.termsContent);
   });
 
   [...elements.termsClose].forEach((item) => {
     item.addEventListener('click', () => {
-      app.closeTerms();
+      app.closeSideModal(elements.termsOverlay, elements.termsContent);
     });
   });
 
-  [...elements.accordionItems].forEach((item) => {
-    item.addEventListener('click', ({ currentTarget }) => {
-      currentTarget.classList.toggle(classes.expanded);
-    });
-  });
-
+  // REQUEST MODAL
   elements.requestModalTrigger?.addEventListener('click', () => {
-    app.openRequestModal();
+    app.openModal(elements.requestOverlay);
   });
 
   [...elements.requestModalClose].forEach((item) => {
     item.addEventListener('click', () => {
-      app.closeRequestModal();
+      app.closeModal(elements.requestOverlay);
     });
   });
 
+  // BONDS MODAL
   elements.bondsModalTrigger?.addEventListener('click', () => {
-    app.openBondsModal();
+    app.openModal(elements.bondsModalOverlay);
     elements.bondsScrollable.addEventListener('scroll', handleHorizontalScroll);
   });
 
   elements.bondsModalClose.addEventListener('click', () => {
     elements.bondsScrollable.removeEventListener('scroll', handleHorizontalScroll);
-    app.closeBondsModal();
+    app.closeModal(elements.bondsModalOverlay);
+  });
+
+  // ACCORDION
+  [...elements.accordionItems].forEach((item) => {
+    item.addEventListener('click', ({ currentTarget }) => {
+      currentTarget.classList.toggle(classes.expanded);
+    });
   });
 
   console.log('app initialized...');
