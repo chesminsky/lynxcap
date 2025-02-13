@@ -83,6 +83,20 @@ img {
   }
 }
 
+.anchor-button--white {
+  svg {
+    border-color: white;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    svg {
+      color: var(--color-dark-blue);
+      background: var(--color-white);
+    }
+  }
+}
+
 .custom-checkbox {
   display: flex;
   align-items: flex-start;

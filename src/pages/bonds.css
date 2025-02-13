@@ -3,6 +3,13 @@
   background-image: unset !important;
 }
 
+.bonds-banner {
+  background: url('./assets/bonds-banner.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 330px;
+}
+
 .bonds-info {
   display: grid;
   grid-template-columns: 1fr;
@@ -19,7 +26,6 @@
       }
     }
   }
-  
 }
 
 .investors {
@@ -47,9 +53,6 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-  .bonds-tranches-icon {
-    display: none;
-  }
 }
 
 .bonds-second {
@@ -57,21 +60,16 @@
 }
 
 .bonds-blueblock {
-  background: #000039;
+  background: var(--color-dark-blue);
+  color: white;
   .wh-container {
     padding-top: 64px;
   }
-  color: white;
-  .font-serif.text-8xl.mb-2 {
-    color: #d4c09e;
-  }
-
   .info-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 64px;
   }
-
 }
 
 .bonds-luxembourg {
@@ -109,6 +107,10 @@
 }
 
 @media (min-width: theme('screens.desktop')) {
+  .bonds-banner {
+    height: 430px;
+  }
+
   .bonds-info {
     grid-template-columns: 2fr 1fr;
     gap: 0 120px;
@@ -123,7 +125,6 @@
     }
   }
   .bonds-container {
-
     .investors {
       margin-top: 124px;
       &-right {
@@ -135,9 +136,6 @@
         gap: 120px;
       }
     }
-    .bonds-tranches-icon {
-      display: block;
-    }
     .bonds-tranches {
       grid-template-columns: 1fr 2fr;
     }
@@ -148,7 +146,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 140px;
     }
-
   }
   .bonds-second {
     padding-top: 124px;
