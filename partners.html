@@ -30,7 +30,7 @@
         </div>
       </nav>
       <nav class="nav-mobile text-white bg-dark-blue menu-hidden" data-id="mobile-nav">
-        <div class="flex justify-between p-3 items-center">
+        <div class="flex justify-between items-center nav-mobile__header">
           <div class="logo"><img src="img/logo_white.svg" alt="logo"></div>
           <div data-id="close-nav">
 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,26 +40,27 @@
           </div>
         </div>
         <div class="p-16">
-          <ul class="text-center font-serif text-3xl">
-            <li class="pb-10"><a href="bonds.html">Bonds</a></li>
-            <li class="pb-10"><a href="news.html">News</a></li>
-            <li class="pb-10"><a href="about.html">About us</a></li>
-            <li class="pb-10"><a href="team.html">Team</a></li>
-            <li class="pb-10"><a href="portfolio.html">Portfolio</a></li>
-            <li class="pb-10"><a href="partners.html">Partners</a></li>
+          <ul class="text-center font-serif text-xxl">
+            <li class="pb-8"><a href="bonds.html">Bonds</a></li>
+            <li class="pb-8"><a href="news.html">News</a></li>
+            <li class="pb-8"><a href="about.html">About us</a></li>
+            <li class="pb-8"><a href="team.html">Team</a></li>
+            <li class="pb-8"><a href="portfolio.html">Portfolio</a></li>
+            <li class="pb-8"><a href="partners.html">Partners</a></li>
+            <li class="pb-8"><a href="contacts.html">Contacts  </a></li>
           </ul>
           <hr>
-          <div class="text-center mt-10 font-medium"><a href="#">Login</a></div>
+          <div class="text-center mt-6 font-medium"><a href="#">Login</a></div>
         </div>
       </nav>
     </div>
     <main>
       <div class="mx-auto container wh-container">
-        <h1 class="text-4xl font-serif mb-10 desktop:text-6xl desktop:mb-14">20+ Partners from more than<br>10 jurisdictions</h1>
+        <h1 class="text-4xl font-serif mb-10 desktop:text-6xl desktop:mb-16">20+ Partners from more than<br>10 jurisdictions</h1>
         <div class="plane-banner">                                             </div>
         <div class="mb-20 desktop:mb-24 desktop:grid desktop:grid-cols-3">
           <div class="col-span-2 mb-10">
-            <div class="desktop:text-xl desktop:pr-30">We pride ourselves on the strong relationships that have been built with a diverse array of institutional and professional investors.  <br><br>Additionally, we collaborate closely with our partners whose expertise and support assist us in our acquisitions and enable us to consistently deliver for all our stakeholders.</div>
+            <div class="text-xl desktop:pr-30">We pride ourselves on the strong relationships that have been built with a diverse array of institutional and professional investors.  <br><br>Additionally, we collaborate closely with our partners whose expertise and support assist us in our acquisitions and enable us to consistently deliver for all our stakeholders.</div>
           </div>
           <div class="mb-10">
             <div class="font-serif text-8xl mb-2">15+</div>
@@ -190,24 +191,23 @@
             </div>
           </div>
           <div class="modal__body">
-            <h2 class="text-4xl font-serif mb-6 desktop:text-2xl">Request Audit Report</h2>
-            <div class="mb-8 desktop:text-xl">Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.</div>
+            <h2 class="text-2xl font-serif mb-6 desktop:text-4xl">Request Audit Report</h2>
+            <div class="mb-8 text-xl desktop:text-xxl">Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.</div>
             <div class="items-center mb-8 desktop:flex">
-              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">Name:</div>
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 text-xl desktop:mb-0">Name:</div>
               <input class="custom-input" name="name" autocomplete="off">
             </div>
             <div class="items-center mb-8 desktop:flex desktop:mb-16">
-              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">E-mail:</div>
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 text-xl desktop:mb-0">E-mail:</div>
               <input class="custom-input" name="email" autocomplete="off">
             </div>
             <div class="items-center justify-between desktop:flex">
               <label class="custom-checkbox mb-6">
-                <input type="checkbox"><span class="custom-checkbox-label">
-                   I agree to <span class="underline">non-disclosure terms </span></span>
+                <input type="checkbox"><span class="custom-checkbox-label text-xl">I agree to <span class="underline">non-disclosure terms </span></span>
               </label>
               <button class="btn" type="submit">Submit</button>
             </div>
-            <div class="mb-8 text-xl">Thank you! <br><br>Your request has been submitted successfully.<br>Our team will contact you shortly.</div>
+            <div class="mb-8 text-xl desktop:text-xxl">Thank you! <br><br>Your request has been submitted successfully.<br>Our team will contact you shortly.</div>
             <button class="btn" type="button" data-id="request-modal-close">Close</button>
           </div>
         </form>

@@ -30,7 +30,7 @@
         </div>
       </nav>
       <nav class="nav-mobile text-white bg-dark-blue menu-hidden" data-id="mobile-nav">
-        <div class="flex justify-between p-3 items-center">
+        <div class="flex justify-between items-center nav-mobile__header">
           <div class="logo"><img src="img/logo_white.svg" alt="logo"></div>
           <div data-id="close-nav">
 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,16 +40,17 @@
           </div>
         </div>
         <div class="p-16">
-          <ul class="text-center font-serif text-3xl">
-            <li class="pb-10"><a href="bonds.html">Bonds</a></li>
-            <li class="pb-10"><a href="news.html">News</a></li>
-            <li class="pb-10"><a href="about.html">About us</a></li>
-            <li class="pb-10"><a href="team.html">Team</a></li>
-            <li class="pb-10"><a href="portfolio.html">Portfolio</a></li>
-            <li class="pb-10"><a href="partners.html">Partners</a></li>
+          <ul class="text-center font-serif text-xxl">
+            <li class="pb-8"><a href="bonds.html">Bonds</a></li>
+            <li class="pb-8"><a href="news.html">News</a></li>
+            <li class="pb-8"><a href="about.html">About us</a></li>
+            <li class="pb-8"><a href="team.html">Team</a></li>
+            <li class="pb-8"><a href="portfolio.html">Portfolio</a></li>
+            <li class="pb-8"><a href="partners.html">Partners</a></li>
+            <li class="pb-8"><a href="contacts.html">Contacts  </a></li>
           </ul>
           <hr>
-          <div class="text-center mt-10 font-medium"><a href="#">Login</a></div>
+          <div class="text-center mt-6 font-medium"><a href="#">Login</a></div>
         </div>
       </nav>
     </div>
@@ -83,12 +84,10 @@
           </div>
         </div>
         <div class="mb-6">   
-          <div class="text-bronze-1 flex">
-            <div class="pt-2">
-<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M18.223 0H11.0434L-0.125 16.5521H6.99768L18.223 0Z" fill="currentColor"></path>
-</svg>
-            </div><span class="text-2xl ml-2 font-medium">Real Estate Values by Country</span>
+          <div class="vector-marker text-bronze-1">
+<svg width="19" height="17" viewbox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18.473 0.192749H11.2934L0.125 16.7449H7.24768L18.473 0.192749Z" fill="currentColor"></path>
+</svg>Real Estate Values by Country
           </div>
         </div>
         <h2 class="portfolio-subheader text-4xl font-serif mb-6 desktop:text-5xl desktop:mb-10">We specialize in managing a diversified portfolio in Europe   </h2>
@@ -110,14 +109,14 @@
             </div>
           </div>
         </div>
-        <div class="portfolio-map">  </div>
+        <div class="portfolio-map-wrap">
+          <div class="portfolio-map">  </div>
+        </div>
         <div class="mb-6">   
-          <div class="text-bronze-1 flex">
-            <div class="pt-2">
-<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M18.223 0H11.0434L-0.125 16.5521H6.99768L18.223 0Z" fill="currentColor"></path>
-</svg>
-            </div><span class="text-2xl ml-2 font-medium">Real Estate Values by Type</span>
+          <div class="vector-marker text-bronze-1">
+<svg width="19" height="17" viewbox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18.473 0.192749H11.2934L0.125 16.7449H7.24768L18.473 0.192749Z" fill="currentColor"></path>
+</svg>Real Estate Values by Type
           </div>
         </div>
         <h2 class="text-4xl font-serif mb-6 desktop:text-5xl desktop:mb-10">Our holdings include a mix of real estate</h2>
@@ -137,12 +136,10 @@
           </div>
         </div>
         <div class="mb-6">   
-          <div class="text-bronze-1 flex">
-            <div class="pt-2">
-<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M18.223 0H11.0434L-0.125 16.5521H6.99768L18.223 0Z" fill="currentColor"></path>
-</svg>
-            </div><span class="text-2xl ml-2 font-medium">Portfolio Management</span>
+          <div class="vector-marker text-bronze-1">
+<svg width="19" height="17" viewbox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18.473 0.192749H11.2934L0.125 16.7449H7.24768L18.473 0.192749Z" fill="currentColor"></path>
+</svg>Portfolio Management
           </div>
         </div>
         <h2 class="text-4xl font-serif mb-6 desktop:text-5xl desktop:mb-10">Meet our platform LISA</h2>
@@ -342,24 +339,23 @@
             </div>
           </div>
           <div class="modal__body">
-            <h2 class="text-4xl font-serif mb-6 desktop:text-2xl">Request Audit Report</h2>
-            <div class="mb-8 desktop:text-xl">Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.</div>
+            <h2 class="text-2xl font-serif mb-6 desktop:text-4xl">Request Audit Report</h2>
+            <div class="mb-8 text-xl desktop:text-xxl">Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.</div>
             <div class="items-center mb-8 desktop:flex">
-              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">Name:</div>
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 text-xl desktop:mb-0">Name:</div>
               <input class="custom-input" name="name" autocomplete="off">
             </div>
             <div class="items-center mb-8 desktop:flex desktop:mb-16">
-              <div class="font-medium pr-12 whitespace-nowrap mb-3 desktop:mb-0">E-mail:</div>
+              <div class="font-medium pr-12 whitespace-nowrap mb-3 text-xl desktop:mb-0">E-mail:</div>
               <input class="custom-input" name="email" autocomplete="off">
             </div>
             <div class="items-center justify-between desktop:flex">
               <label class="custom-checkbox mb-6">
-                <input type="checkbox"><span class="custom-checkbox-label">
-                   I agree to <span class="underline">non-disclosure terms </span></span>
+                <input type="checkbox"><span class="custom-checkbox-label text-xl">I agree to <span class="underline">non-disclosure terms </span></span>
               </label>
               <button class="btn" type="submit">Submit</button>
             </div>
-            <div class="mb-8 text-xl">Thank you! <br><br>Your request has been submitted successfully.<br>Our team will contact you shortly.</div>
+            <div class="mb-8 text-xl desktop:text-xxl">Thank you! <br><br>Your request has been submitted successfully.<br>Our team will contact you shortly.</div>
             <button class="btn" type="button" data-id="request-modal-close">Close</button>
           </div>
         </form>
