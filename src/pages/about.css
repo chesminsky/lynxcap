@@ -3,8 +3,6 @@
     &-desktop {
       display: none;
     }
-    &-mobile {
-    }
   }
 
   .about-stats {
@@ -17,20 +15,10 @@
       grid-template-columns: 1fr;
       gap: 32px;
     }
-    &-text {
-      .text-base {
-        line-height: 26px;
-        font-size: 20px;
-      }
-    }
   }
 
   .about-stats-euro {
-    color: #b9b9b9;
-  }
-
-  .text-base {
-    font-size: 16px;
+    color: var(--color-grey-4);
   }
 
   .about-grid {
@@ -38,6 +26,7 @@
     grid-template-columns: 1fr;
     background-image: url('./assets/about-grid-bg.svg');
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: auto 100%;
     gap: 40px;
     padding-left: 20px;
@@ -75,9 +64,7 @@
         display: none;
       }
     }
-    .text-base {
-      font-size: 20px;
-    }
+
     .about-stats {
       grid-template-columns: 3fr 7fr;
       gap: 120px;
@@ -86,12 +73,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px 52px;
-      }
-      &-text {
-        .text-base {
-          line-height: 32px;
-          font-size: 24px;
-        }
       }
     }
     .about-grid {
@@ -111,24 +92,17 @@
     }
   }
   .about-approach {
-    .text-base {
-      font-size: 24px;
-      width: 70%;
-    }
     &-grid {
       display: grid;
       margin-top: 55px;
       grid-template-columns: 1fr 1fr 1fr !important;
       gap: 44px;
-      .text-base {
-        font-size: 20px;
-      }
     }
   }
   .about-audit-grid {
     display: grid;
     grid-template-columns: 1fr 2fr !important;
     margin-top: 48px;
-    margin-bottom: 270px !important;
+    margin-bottom: 120px !important;
   }
 }

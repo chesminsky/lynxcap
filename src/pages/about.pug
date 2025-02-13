@@ -10,9 +10,9 @@ block content
         img.size-full.about-header-mobile(src=require("../assets/about-header-mobile.png"))
 
         .about-stats.mt-10(class="desktop:mt-14")
-            .about-stats-text(class="desktop:mt-4")
-                p.text-base We are Swiss experts in real estate secured claims acquisitions and workout, supported by a proprietary data set built on 15+ years of accumulated analysis. 
-                p.text-base.mt-4 Through our innovative IT solution, we deliver operational efficiency and investment transparency, consistently achieving positive returns. 
+            .about-stats-text.text-xl(class="desktop:text-xxl desktop:mt-4")
+                p We are Swiss experts in real estate secured claims acquisitions and workout, supported by a proprietary data set built on 15+ years of accumulated analysis. 
+                p.mt-4 Through our innovative IT solution, we deliver operational efficiency and investment transparency, consistently achieving positive returns. 
 
             .about-stats-numbers
                 .about-stats-number-cell 
@@ -40,17 +40,22 @@ block content
                         | Net Debt to ERC ratio  
 
         .about-grid.mt-10(class="desktop:mt-26")
-                - var n = 0
-                while n < 4
-                    - n++
-                    .about-grid-cell 
-                        svg(width='65' height='63' viewbox='0 0 65 63' fill='none' xmlns='http://www.w3.org/2000/svg')
-                            path(d='M1.87305 30.9598L25.832 17.7318L45.7979 24.3871L63.1016 4.42126V61.6566H1.87305V1.75916' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                            path(d='M1.87305 47.0168L23.1699 35.0373H40.4736L63.1016 25.6986' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                            path(d='M1.87305 60.4124L23.1699 45.6882L40.4736 47.0193L63.1016 41.6951' stroke='#000039' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                                                                                                                    
-                        h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xl desktop:mt-8") High Performance Team
-                        p.text-base.mt-3(class="desktop:text-4xl desktop:mt-3") with headquarters in Zug, Switzerland and regional offices in Luxembourg, Hong Kong, Seoul and Slovenia practically all with the background in different European distressed funds.
+            .about-grid-cell 
+                img(src=require("../assets/about-1.svg"))                                                                                           
+                h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xl desktop:mt-8") High Performance Team
+                p.text-base.mt-3(class="desktop:text-xl desktop:mt-3") with headquarters in Zug, Switzerland and regional offices in Luxembourg, Hong Kong, Seoul and Slovenia practically all with the background in different European distressed funds.
+            .about-grid-cell 
+                img(src=require("../assets/about-2.svg"))                                                                                           
+                h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xl desktop:mt-8") Robust Risk Management Practices
+                p.text-base.mt-3(class="desktop:text-xl desktop:mt-3") with advanced methodology analysis and forecasting based on accumulated proprietary information, statistical applications and understanding of actual legal and workout processes. Underwriting is always done on claim level analysis.
+            .about-grid-cell 
+                img(src=require("../assets/about-3.svg"))                                                                                           
+                h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xl desktop:mt-8") Proprietary IT Platform LISA
+                p.text-base.mt-3(class="desktop:text-xl desktop:mt-3") Lynxcap Investment Software Application or LISA for short is a reporting and analytical tool that allows us to achieve operational and cost efficiency by creating a real time feed between our certified collection partners and legal offices  in relation to the over 30 000 + claims and REO's in our portfolios.
+            .about-grid-cell 
+                img(src=require("../assets/about-4.svg"))                                                                                           
+                h3.font-serif.text-3xl.mt-5.inline-block(class="desktop:text-4xl desktop:mt-8") Access to Exclusive Investment Opportunities
+                p.text-base.mt-3(class="desktop:text-xl desktop:mt-3") that are not available through traditional channels enhancing portfolio diversification. Ability to screen through large number of opportunities in Europe to select ones where resources should be concentrated to achieve highest risk adjusted returns.
 
         .about-approach.mt-20(class="desktop:mt-26")
             .vector-marker.text-bronze-1
@@ -59,24 +64,24 @@ block content
 
             h2.text-4xl.font-serif.mt-9(class="desktop:text-6xl desktop:mt-10") Tailored strategic approach
 
-            p.text-base.mt-6(class="desktop:mt-10") We adopt a tailored strategic approach to real estate secured claims acquisitions and workout, leveraging a team of seasoned experts to deliver exceptional results.  We prioritize return on capital over amount deployed, ensuring that our strategies align with our goal of sustainable growth for our stakeholders.
+            p.text-base.mt-6(class="desktop:text-xxl desktop:mt-10") We adopt a tailored strategic approach to real estate secured claims acquisitions and workout, leveraging a team of seasoned experts to deliver exceptional results.  We prioritize return on capital over amount deployed, ensuring that our strategies align with our goal of sustainable growth for our stakeholders.
 
             div.about-approach-grid
                 div.about-approach-grid-cell 
                     h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
                     br
                     h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
-                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+                    p.text-base(class="desktop:text-xl") Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
                 div.about-approach-grid-cell 
-                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
+                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 02
                     br
-                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
-                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Operational efficiency
+                    p.text-base(class="desktop:text-xl") Operational efficiency is at the core of our approach. By integrating our proprietary IT solutions into our processes, we streamline operations and enhance decision-making, enabling us to maximize recovery outcomes while minimizing costs 
                 div.about-approach-grid-cell 
-                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 01
+                    h3.font-serif.text-3xl.mb-6.inline-block(class="desktop:text-4xl") 03
                     br
-                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Advanced analytical methodologies
-                    p.text-base Our advanced analytical methodologies allow us to conduct thorough asset evaluations backed by a comprehensive data set derived from years of proprietary analysis.
+                    h3.font-serif.text-3xl.mb-3.inline-block(class="desktop:text-4xl") Investors benefit
+                    p.text-base(class="desktop:text-xl") We are committed to ensuring our investors benefit from our expertise and innovative strategies consistently achieving positive returns and exit multiple of 1.61.
 
 
         .about-audit.mt-20
@@ -92,7 +97,7 @@ block content
 
                 .about-audit-grid-info
                     
-                    p.text-base(class="desktop:w-110") This partnership underscores our commitment to transparency and accountability.
+                    p.text-base(class="desktop:text-xxl") This partnership underscores our commitment to transparency and accountability.
                     a.anchor-button.mt-6(data-id="request-modal-trigger")
                         span Request Audit Report
                         +svg-icon(svg-icon-name='right-arrow')
