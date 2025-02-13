@@ -6,10 +6,6 @@
 .bonds-info {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
-  .info-description {
-    font-size: 20px;
-  }
   .info-table {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,32 +19,13 @@
       }
     }
   }
-  .info-download {
-    svg {
-      border: none;
-      background: none !important;
-    }
-  }
+  
 }
 
 .investors {
   margin-top: 88px;
-  &-subtitle {
-    color: #c29b57;
-    font-size: 24px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    align-items: baseline;
-  }
-  .text-base {
-    font-size: 16px;
-  }
+
   &-container {
-    display: flex;
-    flex-direction: column;
     gap: 32px;
   }
   &-right {
@@ -94,14 +71,7 @@
     grid-template-columns: 1fr;
     gap: 64px;
   }
-  .text-base {
-    font-size: 16px;
-  }
-  .anchor-button {
-    svg {
-      border: 2px solid white !important;
-    }
-  }
+
 }
 
 .bonds-luxembourg {
@@ -109,16 +79,12 @@
   grid-template-columns: 1fr 2fr;
 }
 .bonds-luxembourg {
-  /* background-image: url('./assets/lx-bg-mobile.png'); */
   width: 100%;
-  /* height: calc((100vw - 32px) * 2.7926); */
-  /* height: 600px; */
   background-repeat: no-repeat;
   background-size: 100%;
   display: grid;
   grid-template-columns: 1fr;
   &-info {
-    /* margin-top: calc(100vw - 20px + 50px); */
     background-size: 100% 100%;
     padding: 16px;
     background-repeat: no-repeat;
@@ -126,13 +92,9 @@
   }
   &-img {
     background-size: 100% 100%;
-    /* display: none; */
     background-repeat: no-repeat;
-    /* background-image: url('./assets/lx-bg-img.png'); */
     &-desktop {
       display: none;
-    }
-    &-mobile {
     }
   }
 }
@@ -148,16 +110,9 @@
 
 @media (min-width: theme('screens.desktop')) {
   .bonds-info {
-    grid-template-columns: 1fr 256px;
+    grid-template-columns: 2fr 1fr;
     gap: 0 120px;
 
-    .info-description {
-      font-size: 24px;
-    }
-
-    .info-percentage {
-      margin-top: 0;
-    }
     .info-table {
       display: grid;
       grid-template-columns: 1fr 1fr 3fr;
@@ -166,27 +121,18 @@
         grid-area: initial !important;
       }
     }
-
-    .info-download {
-      margin-top: 24px;
-      svg {
-        border: none;
-        background: none !important;
-      }
-    }
   }
   .bonds-container {
-    .text-base {
-      font-size: 20px;
-    }
+
     .investors {
       margin-top: 124px;
       &-right {
         display: flex;
       }
       &-container {
-        flex-direction: row;
-        gap: 140px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 120px;
       }
     }
     .bonds-tranches-icon {
@@ -202,26 +148,20 @@
       grid-template-columns: 1fr 1fr;
       gap: 140px;
     }
-    .text-base {
-      font-size: 20px;
-    }
+
   }
   .bonds-second {
     padding-top: 124px;
   }
 
   .bonds-luxembourg {
-    /* background-image: url('./assets/lx-bg.png'); */
     grid-template-columns: 1fr 2fr;
-    /* height: 626px; */
     &-info {
       padding-left: 138px;
       padding-right: 186px;
       padding-top: 86px;
     }
-    .text-base {
-      line-height: 26px;
-    }
+
     &-img {
       &-desktop {
         display: block;

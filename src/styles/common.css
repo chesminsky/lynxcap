@@ -3,6 +3,7 @@ body {
   color: var(--color-dark-blue);
   font-weight: 400;
   overflow-x: hidden;
+  font-size: var(--text-base);
 }
 
 img {
@@ -151,4 +152,14 @@ img {
 /* Error State */
 .custom-input.error {
   border-color: var(--color-error);
+}
+
+.vector-marker {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  align-items: baseline;
 }
