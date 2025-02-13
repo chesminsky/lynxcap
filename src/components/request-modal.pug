@@ -1,31 +1,31 @@
-.overlay.overlay-modal.hidden(data-id="request-modal-overlay")
+.overlay.overlay-modal(data-id="request-modal-overlay")
     form.modal
         .modal__close
             .cursor-pointer(data-id="request-modal-close")
                 +svg-icon(svg-icon-name='close')
         .modal__body
-            h2.text-4xl.font-serif.mb-6(class="desktop:text-2xl")
+            h2.text-2xl.font-serif.mb-6(class="desktop:text-4xl")
                 | Request Audit Report
-            .mb-8(class="desktop:text-xl")
+            .mb-8.text-xl(class="desktop:text-xxl")
                 | Please provide your contact details and agree to the non-disclosure terms to receive a copy of the audit report.
             .items-center.mb-8(class="desktop:flex")
-                .font-medium.pr-12.whitespace-nowrap.mb-3(class="desktop:mb-0")
+                .font-medium.pr-12.whitespace-nowrap.mb-3.text-xl(class="desktop:mb-0")
                     | Name:
                 input.custom-input(name="name" autocomplete="off")
             .items-center.mb-8(class="desktop:flex desktop:mb-16")
-                .font-medium.pr-12.whitespace-nowrap.mb-3(class="desktop:mb-0")
+                .font-medium.pr-12.whitespace-nowrap.mb-3.text-xl(class="desktop:mb-0")
                     | E-mail:
                 input.custom-input(name="email" autocomplete="off")         
             .items-center.justify-between(class="desktop:flex")
                 label.custom-checkbox.mb-6
                     input(type="checkbox")
-                    span.custom-checkbox-label 
+                    span.custom-checkbox-label.text-xl
                         | I agree to 
                         span.underline
                             | non-disclosure terms 
                 button.btn(type="submit") Submit
 
-            .mb-8.text-xl
+            .mb-8.text-xl(class="desktop:text-xxl")
                 | Thank you! 
                 br
                 br

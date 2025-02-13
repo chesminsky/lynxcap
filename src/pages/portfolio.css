@@ -20,15 +20,22 @@
   }
 }
 
+.portfolio-map-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 100px;
+  margin-left: 0;
+  margin-right: 0;
+  scroll-padding-left: 25px;
+}
+
 .portfolio-map {
-  height: 540px;
+  height: 470px;
   background-image: url('./assets/portfolio-map.png');
-  background-position-x: 25%;
+  background-position: bottom center;
   background-position-y: bottom;
   background-repeat: no-repeat;
-  margin-bottom: 100px;
-  margin-left: -16px;
-  margin-right: -16px;
+  min-width: 1180px;
 }
 
 .portfolio-subheader {
@@ -37,9 +44,11 @@
 
 @media (min-width: theme('screens.desktop')) {
   .portfolio-map {
-    background-position: bottom center;
-    margin-left: 0;
-    margin-right: 0;
+    height: 540px;
+  }
+  .portfolio-map-wrap {
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
