@@ -28,25 +28,27 @@ mixin nav(current_page)
                         img(src=require("../assets/burger.svg"), alt="burger")
 
     nav.nav-mobile.text-white.bg-dark-blue.menu-hidden(data-id="mobile-nav")
-        .flex.justify-between.p-3.items-center
+        .flex.justify-between.items-center.nav-mobile__header
             .logo
                 img(src=require("../assets/logo_white.svg"), alt="logo")
             div(data-id="close-nav")
                 +svg-icon(svg-icon-name='close')    
         .p-16
-            ul.text-center.font-serif.text-3xl
-                li.pb-10
+            ul.text-center.font-serif.text-xxl
+                li.pb-8
                     a(href="bonds.html") Bonds
-                li.pb-10
+                li.pb-8
                     a(href="news.html") News
-                li.pb-10
+                li.pb-8
                     a(href="about.html") About us
-                li.pb-10
+                li.pb-8
                     a(href="team.html") Team
-                li.pb-10
+                li.pb-8
                     a(href="portfolio.html") Portfolio
-                li.pb-10
+                li.pb-8
                     a(href="partners.html") Partners
+                li.pb-8
+                    a(href="contacts.html") Contacts  
             hr
-            .text-center.mt-10.font-medium
+            .text-center.mt-6.font-medium
                 a(href="#") Login
