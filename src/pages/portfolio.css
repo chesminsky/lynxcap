@@ -30,11 +30,11 @@
 }
 
 .portfolio-map {
-  height: 470px;
-  background-image: url('./assets/portfolio-map.png');
-  background-position: bottom center;
   background-position-y: bottom;
   background-repeat: no-repeat;
+  background-image: url('./assets/portfolio-map.svg');
+  background-position: center center;
+  height: 540px;
   min-width: 1180px;
 }
 
@@ -54,6 +54,7 @@
 
 @media (min-width: theme('screens.large')) {
   .portfolio-map {
+    height: 600px;
     background-size: cover;
   }
 }
