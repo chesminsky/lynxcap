@@ -13,7 +13,6 @@
   }
 }
 
-
 @media (min-width: theme('screens.large')) {
   .buildings-banner {
     background-size: cover;
@@ -86,3 +85,61 @@
     transform: rotate(180deg);
   }
 }
+
+.pie-legend-item-marker {
+  font-weight: 500;
+  height: 26px;
+  width: 26px;
+  border-radius: 100%;
+  background-color: transparent;
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  margin-right: 8px;
+  transition: background-color 0.15s ease-in-out;
+  &:after {
+    content: '.';
+  }
+}
+
+.pie-marker + path {
+  pointer-events: none;
+}
+
+.pie-highlighted {
+  cursor: pointer;
+  transition: fill 0.15s ease-in-out;
+  &.pie-slice {
+    fill: var(--color-blue-2);
+  }
+  &.pie-legend-item .pie-legend-item-marker {
+    background-color: var(--color-bronze-1);
+    color: white;
+    &:after {
+      display: none;
+    }
+  }
+  &.pie-marker {
+    fill: var(--color-bronze-1);
+  }
+}
+
+.pie {
+  position: relative;
+}
+
+.pie-total {
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  z-index: 1;
+  top: calc(50% - 57px);
+  left: calc(50% - 91px);
+  line-height: 120px;
+  border-radius: 100%;
+  cursor: default;
+}
+

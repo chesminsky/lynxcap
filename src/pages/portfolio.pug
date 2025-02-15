@@ -51,27 +51,28 @@ block content
                 | that are geographically stratified, encompassing key markets. This strategic distribution mitigates risk and enables us to leverage our regional expertise to unlock the potential of each asset.
             .mb-10
                 div(class="desktop:flex")
-                    .mb-10(class="desktop:pr-15")
-                        img(src=require("../assets/pie1.svg"))
+                    .mb-10.pie(class="desktop:pr-15")
+                        .pie-total €131.5M
+                        include ../components/diagrams/pie1.pug
                     .mb-10 
                         ol(class="desktop:text-xl")
-                            li.mb-3
-                                span.mr-4.font-medium 1.
+                            li.pb-3.pie-legend-item(data-id="croatia")
+                                span.pie-legend-item-marker 1
                                 span Croatia 9.74M
-                            li.mb-3
-                                span.mr-4.font-medium 2.
+                            li.pb-3.pie-legend-item(data-id="slovenia")
+                                span.pie-legend-item-marker 2
                                 span Slovenia 11.18M
-                            li.mb-3
-                                span.mr-4.font-medium 3.
+                            li.pb-3.pie-legend-item(data-id="serbia")
+                                span.pie-legend-item-marker 3
                                 span Serbia 10.27M
-                            li.mb-3
-                                span.mr-4.font-medium 4.
+                            li.pb-3.pie-legend-item(data-id="greece")
+                                span.pie-legend-item-marker 4
                                 span Greece 2.30M
-                            li.mb-3
-                                span.mr-4.font-medium 5.
+                            li.pb-3.pie-legend-item(data-id="montenegro")
+                                span.pie-legend-item-marker 5
                                 span Montenegro 0.26M
-                            li.mb-3
-                                span.mr-4.font-medium 6.
+                            li.pb-3.pie-legend-item(data-id="spain")
+                                span.pie-legend-item-marker 6
                                 span Spain 97.76M        
         .portfolio-map-wrap
             .portfolio-map   
@@ -88,18 +89,19 @@ block content
                 | Our holdings include a mix of real estate back claims and real estate owned assets encompassing land, residential and commercial properties.
             .mb-10
                 div(class="desktop:flex")
-                    .mb-10(class="desktop:pr-15")
-                        img(src=require("../assets/pie2.svg"))
+                    .mb-10.pie(class="desktop:pr-15")
+                        .pie-total €131.5M
+                        include ../components/diagrams/pie2.pug
                     .mb-10 
                         ol(class="desktop:text-xl")
-                            li.mb-3
-                                span.mr-4.font-medium 1.
-                                span Land 18.68M
-                            li.mb-3
-                                span.mr-4.font-medium 2.
+                            li.pb-3.pie-legend-item(data-id="land")
+                                span.pie-legend-item-marker 1
+                                span Land 18.68M  
+                            li.pb-3.pie-legend-item(data-id="commercial")
+                                span.pie-legend-item-marker 2
                                 span Commercial 41.93M
-                            li.mb-3
-                                span.mr-4.font-medium 3.
+                            li.pb-3.pie-legend-item(data-id="residential")
+                                span.pie-legend-item-marker 3
                                 span Residential 70.91M
                                                                                                                                                 
         .mb-6    

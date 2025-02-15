@@ -1,4 +1,5 @@
 import './index.css';
+import './scripts/charts.js';
 
 const init = () => {
   const elements = {
