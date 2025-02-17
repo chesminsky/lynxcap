@@ -15,6 +15,7 @@
 @import './components/request-modal.css';
 @import './components/team-modal.css';
 @import './components/bonds-modal.css';
+@import './components/cookies-modal.css';
 
 /* pages */
 @import './pages/index.css';

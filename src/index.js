@@ -31,7 +31,10 @@ const init = () => {
     teamModalTrigger: document.querySelectorAll('[data-id="team-trigger"]') || [],
     teamModalClose: document.querySelectorAll('[data-id="team-close"]') || [],
     teamModalOverlay: document.querySelector('[data-id="team-overlay"]'),
-    teamContent: document.querySelector('[data-id="team"]')
+    teamContent: document.querySelector('[data-id="team"]'),
+
+    cookiesModal: document.querySelector('[data-id="cookies-modal"]'),
+    cookiesModalClose: document.querySelectorAll('[data-id="cookies-modal-close"]') || [],
   };
 
   const classes = {
@@ -63,6 +66,12 @@ const init = () => {
     closeModal(overlay) {
       overlay?.classList.add(classes.hidden);
       document.body.classList.remove(classes.noScroll);
+    },
+    openCookiesModal() {
+      elements.cookiesModal.classList.remove(classes.hidden);
+    },
+    closeCookiesModal() {
+      elements.cookiesModal.classList.add(classes.hidden);
     }
   };
 
@@ -135,6 +144,13 @@ const init = () => {
   [...elements.accordionItems].forEach((item) => {
     item.addEventListener('click', ({ currentTarget }) => {
       currentTarget.classList.toggle(classes.expanded);
+    });
+  });
+
+  // COOKIES
+  [...elements.cookiesModalClose].forEach((item) => {
+    item.addEventListener('click', () => {
+      app.closeCookiesModal();
     });
   });
 

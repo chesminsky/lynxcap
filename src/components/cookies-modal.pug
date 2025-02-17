@@ -1,0 +1,10 @@
+form.cookies-modal.hidden(data-id="cookies-modal")
+    .cookies-modal__close
+        .cursor-pointer(data-id="cookies-modal-close")
+            +svg-icon(svg-icon-name='close')
+    .font-serif.text-2xl.mb-6(class="desktop:text-4xl")
+        | Cookies Consent 
+    p.mb-6 This website use cookies to help you have a superior and more admissible browsing experience on the website. Read more
+    .flex 
+        .btn Accept 
+        .btn.btn-default.ml-6(data-id="cookies-modal-close") Decline
