@@ -1,12 +1,12 @@
 const mapElement = document.querySelector('.portfolio-map-wrap');
 
-function isElementVisible(el) {
+function isFullyVisible(el) {
   const rect = el.getBoundingClientRect();
-  return rect.top >= 0 && rect.top <= window.innerHeight;
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
 }
 
 function onScroll() {
-  if (mapElement && isElementVisible(mapElement)) {
+  if (mapElement && isFullyVisible(mapElement)) {
     scrollToEnd(mapElement);
     window.removeEventListener('scroll', onScroll);
   }
