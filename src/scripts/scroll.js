@@ -7,15 +7,28 @@ function isElementVisible(el) {
 
 function onScroll() {
   if (mapElement && isElementVisible(mapElement)) {
-    setTimeout(() => {
-      smoothScrollRight();
-    }, 1000);
+    scrollToEnd(mapElement);
     window.removeEventListener('scroll', onScroll);
   }
 }
 
-function smoothScrollRight() {
-  mapElement.scrollBy({ left: 1180, behavior: 'smooth' });
+function scrollToEnd(element) {
+  const start = element.scrollLeft;
+  const end = element.scrollWidth - element.clientWidth;
+  const duration = 2000; // Duration in milliseconds
+  let startTime = null;
+
+  function animateScroll(time) {
+      if (!startTime) startTime = time;
+      const progress = Math.min((time - startTime) / duration, 1);
+      element.scrollLeft = start + (end - start) * progress;
+
+      if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+      }
+  }
+
+  requestAnimationFrame(animateScroll);
 }
 
 window.addEventListener('scroll', onScroll);
