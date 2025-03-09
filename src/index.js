@@ -1,5 +1,6 @@
 import './index.css';
 import './scripts/charts.js';
+import './scripts/scroll.js';
 
 const init = () => {
   const elements = {
