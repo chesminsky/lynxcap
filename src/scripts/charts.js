@@ -5,7 +5,6 @@ const init = () => {
     greece: document.querySelectorAll('[data-id="greece"]') || [],
     croatia: document.querySelectorAll('[data-id="croatia"]') || [],
     slovenia: document.querySelectorAll('[data-id="slovenia"]') || [],
-    montenegro: document.querySelectorAll('[data-id="montenegro"]') || [],
     serbia: document.querySelectorAll('[data-id="serbia"]') || [],
 
     // pie 2
