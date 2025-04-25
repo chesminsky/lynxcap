@@ -61,3 +61,42 @@
     font-size: 32px;
   }
 }
+
+.token-about {
+  background-image: url('./assets/t-token-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 24px;
+  position: relative;
+  &__container {
+    max-width: 563px;
+  }
+  &__header {
+    display: block;
+  }
+  &__image {
+    img {
+      max-width: 208px;
+      display: inline-block;
+    }
+    text-align: center;
+  }
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .token-about {
+    padding: 86px 97px;
+  }
+  .token-about__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .token-about__image {
+    text-align: right;
+    img {
+      max-width: unset;
+    }
+  }
+}
+
