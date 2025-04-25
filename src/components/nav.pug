@@ -1,10 +1,11 @@
 mixin nav(current_page)
-    nav.nav.flex.items-center
+    nav.nav.flex.items-center(class=(current_page === "token" && "on-dark"))
         .container.mx-auto
             .flex.justify-between.items-center(class="px-4 desktop:px-0")
                 .logo
                     a(href="./")
                         img(src=require("../assets/logo.svg"), alt="logo")
+                        img.white-logo(src=require("../assets/logo_white.svg"), alt="logo")
                 .nav-links(class="hidden desktop:block")
                     ul.flex.text-base.font-medium
                         li.pr-5
@@ -17,6 +18,8 @@ mixin nav(current_page)
                             a(href="team.html", class=(current_page === "team" && "is-active")) Team
                         li.pr-5
                             a(href="portfolio.html", class=(current_page === "portfolio" && "is-active")) Portfolio
+                        li.pr-5
+                            a(href="token.html", class=(current_page === "token" && "is-active")) Token
                         li.pr-5
                             a(href="partners.html", class=(current_page === "partners" && "is-active")) Partners
                         li.pr-30

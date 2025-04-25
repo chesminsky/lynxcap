@@ -1,0 +1,24 @@
+.token-header {
+  background: var(--color-dark-blue);
+}
+
+.nav {
+  .white-logo {
+    display: none;
+  }
+}
+
+.on-dark.nav {
+  .white-logo {
+    display: block;
+  }
+
+  .nav-links {
+    a {
+      color: var(--color-white);
+    }
+    a.is-active {
+      color: var(--color-bronze-1);
+    }
+  }
+}
