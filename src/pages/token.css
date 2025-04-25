@@ -45,3 +45,19 @@
     }
   }
 }
+
+.lu {
+  position: absolute;
+  top: 15px;
+  left: 19px;
+  font-size: 20px;
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .lu {
+    position: absolute;
+    top: 26px;
+    left: 32px;
+    font-size: 32px;
+  }
+}
