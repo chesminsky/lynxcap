@@ -13,7 +13,7 @@ block header
                         .mb-10
                             .text-white.text-base.font-medium.mb-2 Coupon
                             .text-bronze-2.text-8xl.font-serif.mb-2 6-11%
-                            p.text-white.text-base.font-medium per annum, paid quarterly
+                            .text-white.text-base.font-medium per annum, paid quarterly
                         .text-white.text-base.mb-10(class="desktop:text-xl", style="max-width: 480px") Tokenized LynxCap bonds offer easier access to yields that are backed by real estate security.
                         a.text-white.anchor-button.anchor-button--white(href="#")
                             span How to purchase
@@ -115,7 +115,69 @@ block content
                             a(href="#") BBB-, outlook stable 
                         li Real Asset Collateral: Residential & Commercial properties.
                 
-                
-                
-                
-                
+    .bg-dark-blue.mb-8(class="desktop:mb-25 large:mb-40")     
+        include ../components/footer-hero.pug
+
+    .yield-tables.mx-auto.container.mt-20.px-4(class="desktop:mt-40 px-0")            
+        .token-description.mb-8(class="desktop:mb-25 large:mb-40")
+            h2.text-4xl.font-serif.mb-12(class="desktop:text-5xl desktop:mb-15")
+                | Tokens available: 
+            .mb-12(class="desktop:grid desktop:grid-cols-3 desktop:gap-30 desktop:mb-16")              
+                .mb-10
+                    .text-base.font-medium.mb-1 Token linked to Bond XS2514450100
+                    .text-6xl.font-serif YTM 8.5%
+                    .text-xl.font-medium Aug’26
+                div(class="desktop:col-span-2")
+                    .mb-3.text-xl In case of 100k EUR investment
+                    table
+                        tr
+                            td YTM (Yield to Maturity)
+                            td 8.5%
+                        tr
+                            td Maturity
+                            td 05/08/2026
+                        tr.muted
+                            td Days to maturity
+                            td.text-bronze-1 487
+                        tr.muted
+                            td Total return of invested 100k EUR
+                            td.text-bronze-1 110,932
+                        tr.muted
+                            td Coupons paid during the period, EUR
+                            td.text-bronze-1 110,932
+                        tr
+                            td Principal back, EUR
+                            td 99,01
+                        tr
+                            td Coupon paid per quarter, EUR
+                            td 2,228
+            div(class="desktop:grid desktop:grid-cols-3 desktop:gap-30")              
+                .mb-10
+                    .text-base.font-medium.mb-1 Token linked to Bond XS2706348690
+                    .text-6xl.font-serif YTM 10%
+                    .text-xl.font-medium Okt’27
+                div(class="desktop:col-span-2")
+                    .mb-3.text-xl In case of 100k EUR investment
+                    table
+                        tr
+                            td YTM (Yield to Maturity)
+                            td 10.00%
+                        tr
+                            td Maturity
+                            td 29/10/2027
+                        tr.muted
+                            td Days to maturity
+                            td.text-bronze-1 937
+                        tr.muted
+                            td Total return of invested 100k EUR
+                            td.text-bronze-1 124,454
+                        tr.muted
+                            td Coupons paid during the period, EUR
+                            td.text-bronze-1 27,367
+                        tr
+                            td Principal back, EUR
+                            td 97,087
+                        tr
+                            td Coupon paid per quarter, EUR
+                            td 2,670
+
