@@ -3,14 +3,18 @@
 }
 
 .nav {
-  .white-logo {
+  .white-logo, .white-burger {
     display: none;
   }
 }
 
 .on-dark.nav {
-  .white-logo {
+  .white-logo, .white-burger {
     display: block;
+  }
+
+  .basic-logo, .basic-burger {
+    display: none;
   }
 
   .nav-links {
@@ -19,6 +23,25 @@
     }
     a.is-active {
       color: var(--color-bronze-1);
+    }
+  }
+}
+
+.token-header {
+  .header__content {
+    padding-left: 0;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: theme('screens.desktop')) {
+  .token-header {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

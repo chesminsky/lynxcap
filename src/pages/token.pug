@@ -6,8 +6,20 @@ block variables
 block header
     header.token-header
         .container.mx-auto
-            .header__content
-            h1.text-4xl.font-serif.text-white(class="desktop:text-5xl") Tokenized Real Estate From NPL Portfolios
+            .header__content.token-header
+                h1.text-4xl.font-serif.text-white(class="desktop:text-5xl") Tokenized Real Estate From NPL Portfolios
+                .block.pb-15.mt-5(class="desktop:flex desktop:mt-15")
+                    .block.mb-12(class="desktop:w-1/2")
+                        .mb-10
+                            .text-white.text-base.font-medium Coupon
+                            .text-bronze-2.text-8xl.font-serif.mb-2 6-11%
+                            p.text-white.text-base.font-medium per annum, paid quarterly
+                        .text-white.text-base.mb-10(class="desktop:text-xl", style="max-width: 480px") Tokenized LynxCap bonds offer easier access to yields that are backed by real estate security.
+                        a.text-white.anchor-button.anchor-button--white(href="#")
+                            span How to purchase
+                            +svg-icon(svg-icon-name='right-arrow')
+                    .block(class="desktop:w-1/2")
+                        img(src=require("../assets/t-header-image.png"))
 
 
 block content 

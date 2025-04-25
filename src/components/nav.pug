@@ -4,7 +4,7 @@ mixin nav(current_page)
             .flex.justify-between.items-center(class="px-4 desktop:px-0")
                 .logo
                     a(href="./")
-                        img(src=require("../assets/logo.svg"), alt="logo")
+                        img.basic-logo(src=require("../assets/logo.svg"), alt="logo")
                         img.white-logo(src=require("../assets/logo_white.svg"), alt="logo")
                 .nav-links(class="hidden desktop:block")
                     ul.flex.text-base.font-medium
@@ -28,7 +28,8 @@ mixin nav(current_page)
                             a(href="#") Login
                 .burger(class="desktop:hidden")
                     div(data-id="open-nav")
-                        img(src=require("../assets/burger.svg"), alt="burger")
+                        img.basic-burger(src=require("../assets/burger.svg"), alt="burger")
+                        img.white-burger(src=require("../assets/burger_white.svg"), alt="burger")
 
     nav.nav-mobile.text-white.bg-dark-blue.menu-hidden(data-id="mobile-nav")
         .flex.justify-between.items-center.nav-mobile__header
@@ -48,6 +49,8 @@ mixin nav(current_page)
                     a(href="team.html") Team
                 li.pb-8
                     a(href="portfolio.html") Portfolio
+                li.pb-8
+                    a(href="token.html") Token
                 li.pb-8
                     a(href="partners.html") Partners
                 li.pb-8
