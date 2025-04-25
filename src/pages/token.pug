@@ -24,7 +24,7 @@ block header
 
 block content 
     .mx-auto.container.mt-20.px-4(class="desktop:mt-40 px-0")
-        div(class="desktop:grid desktop:grid-cols-2")
+        div(class="desktop:grid desktop:grid-cols-2 desktop:mb-10")
             .mb-10(class="desktop:mb-20")
                 img.w-9.mb-5(src=require("../assets/p1.svg"), class="desktop:mb-8 desktop:w-15")
                 .text-2xl.font-serif.mb-3(class="desktop:text-4xl")
@@ -62,7 +62,7 @@ block content
                     | Luxembourg Jurisdiction
                 div(class="desktop:text-xl desktop:pr-30")
                     | Compliant to Luxembourg law, benefitting from stock exchange oversight and independent security agents.
-        .token-about
+        .token-about.mb-8(class="desktop:mb-25 large:mb-40")
             .token-about__header 
                 .token-about__container.mb-10(class="desktop:mb-0")
                     h2.text-4xl.font-serif.mb-6(class="desktop:text-5xl desktop:mb-9")
@@ -97,6 +97,23 @@ block content
                         | 05
                     .text-base(class="desktop:text-xxl large:pr-20")
                         | Quarterly payouts of interest
+        .token-description.mb-8(class="desktop:mb-25 large:mb-40")
+            h2.text-4xl.font-serif.mb-12(class="desktop:text-5xl desktop:mb-15")
+                | Multi level security
+            div(class="desktop:grid desktop:grid-cols-3 desktop:gap-30")
+                .mb-10(class="desktop:mb-0")
+                    img(src=require("../assets/t-building.png"))
+                .col-span-2
+                    ul.text-base(class="desktop:text-xxl")
+                        li Issuer audited by Deloitte Luxembourg
+                        li Security Agents: Apex Group and Glas Loan Administration, S.L.
+                        li
+                            | Listed on Luxembourg SE & governed by 
+                            a(href="#") Luxembourg SE rules and regulations 
+                        li
+                            | Bond rating :
+                            a(href="#") BBB-, outlook stable 
+                        li Real Asset Collateral: Residential & Commercial properties.
                 
                 
                 

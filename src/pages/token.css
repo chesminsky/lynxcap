@@ -3,17 +3,20 @@
 }
 
 .nav {
-  .white-logo, .white-burger {
+  .white-logo,
+  .white-burger {
     display: none;
   }
 }
 
 .on-dark.nav {
-  .white-logo, .white-burger {
+  .white-logo,
+  .white-burger {
     display: block;
   }
 
-  .basic-logo, .basic-burger {
+  .basic-logo,
+  .basic-burger {
     display: none;
   }
 
@@ -100,3 +103,24 @@
   }
 }
 
+.token-description {
+  img {
+    width: 100%;
+  }
+  @media (min-width: theme('screens.desktop')) {
+    img {
+      width: auto;
+    }
+  }
+  ul {
+    max-width: 580px;
+    padding-left: 20px;
+    li {
+      list-style: disc;
+      margin-bottom: 24px;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
