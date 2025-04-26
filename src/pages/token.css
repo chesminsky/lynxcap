@@ -174,16 +174,3 @@
   }
 }
 
-.anchor-button--serif {
-  font-family: var(--font-serif);
-  font-size: var(--text-2xl);
-  svg {
-    margin-left: 12px;
-  }
-}
-
-@media (min-width: theme('screens.desktop')) {
-  .anchor-button--serif {
-    font-size: var(--text-4xl);
-  }
-}
